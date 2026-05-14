@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carlos Gibran | Investimentos Imobiliários para Brasileiros no Exterior</title>
+  <meta name="description" content="Carlos Gibran - CRECI 23809. Brasileiro morando na Escócia, especialista em investimentos imobiliários em Itapema e Porto Belo para brasileiros que vivem no exterior.">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#F97316',
+            dark: '#0F172A',
+            darker: '#020617',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Playfair Display', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body { font-family: 'Inter', system-ui, sans-serif; overflow-x: hidden; }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #F97316, #FB923C);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-gradient {
+      background: radial-gradient(ellipse at 30% 50%, rgba(249,115,22,0.08) 0%, transparent 60%),
+                  radial-gradient(ellipse at 70% 20%, rgba(249,115,22,0.05) 0%, transparent 50%);
+    }
+
+    .hero-columns {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      padding: 0 8px;
+      overflow: hidden;
+      mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 85%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 85%, transparent 100%);
+    }
+    .hero-col {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .hero-col:nth-child(3),
+    .hero-col:nth-child(4) { display: none; }
+    .hero-col-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+    .hero-col:nth-child(1) .hero-col-inner { animation: scrollUp 40s linear infinite; }
+    .hero-col:nth-child(2) .hero-col-inner { animation: scrollDown 45s linear infinite; }
+    .hero-col:nth-child(3) .hero-col-inner { animation: scrollUp 38s linear infinite; }
+    .hero-col:nth-child(4) .hero-col-inner { animation: scrollDown 42s linear infinite; }
+    @keyframes scrollUp {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-50%); }
+    }
+    @keyframes scrollDown {
+      0% { transform: translateY(-50%); }
+      100% { transform: translateY(0); }
+    }
+    .hero-col-inner img {
+      width: 100%;
+      border-radius: 8px;
+      object-fit: cover;
+      aspect-ratio: 3/4;
+    }
+    @media (min-width: 768px) {
+      .hero-columns {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+        padding: 0 12px;
+      }
+      .hero-col { gap: 12px; }
+      .hero-col:nth-child(3),
+      .hero-col:nth-child(4) { display: flex; }
+      .hero-col-inner { gap: 12px; }
+      .hero-col:nth-child(1) .hero-col-inner { animation-duration: 30s; }
+      .hero-col:nth-child(2) .hero-col-inner { animation-duration: 35s; }
+      .hero-col:nth-child(3) .hero-col-inner { animation-duration: 28s; }
+      .hero-col:nth-child(4) .hero-col-inner { animation-duration: 32s; }
+      .hero-col-inner img {
+        border-radius: 12px;
+        aspect-ratio: 9/16;
+      }
+    }
+
+    .card-glow:hover {
+      box-shadow: 0 0 40px rgba(249,115,22,0.15);
+    }
+
+    .marquee-track {
+      display: flex;
+      animation: marquee 25s linear infinite;
+      width: max-content;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .nav-blur {
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+
+    .faq-content {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.35s ease;
+    }
+    .faq-content.open {
+      grid-template-rows: 1fr;
+    }
+    .faq-inner {
+      overflow: hidden;
+    }
+
+    .lang-menu {
+      position: relative;
+    }
+    .lang-dropdown {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      margin-top: 4px;
+      background: #0F172A;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 4px;
+      min-width: 140px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    }
+
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #0F172A; }
+    ::-webkit-scrollbar-thumb { background: #F97316; border-radius: 4px; }
+  </style>
+</head>
+<body class="bg-darker text-white antialiased">
+
+<div id="app">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 right-0 z-50 nav-blur bg-darker/80 border-b border-white/5 transition-all duration-300"
+       :class="{ 'shadow-lg shadow-black/20': scrolled }">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+        <a href="#" class="flex items-center gap-3">
+          <img src="assets/logo.png" alt="Carlos Gibran Logo" class="h-10 lg:h-12 w-auto">
+          <div class="hidden sm:block">
+            <span class="text-white font-semibold text-lg leading-tight block">Carlos Gibran</span>
+            <span class="text-white/40 text-xs tracking-widest uppercase">CRECI 23809</span>
+          </div>
+        </a>
+
+        <div class="hidden md:flex items-center gap-8">
+          <a v-for="item in navItems" :key="item.href" :href="item.href"
+             class="text-white/60 hover:text-primary text-sm font-medium transition-colors duration-200">
+            {{ item.label }}
+          </a>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <!-- Language Selector -->
+          <div class="lang-menu">
+            <button @click.stop="toggleLang" class="flex items-center gap-2 text-white border border-white/20 hover:border-primary/50 hover:text-primary px-3.5 py-2 rounded-full hover:bg-white/5 transition-all duration-200 text-sm font-medium">
+              <span class="text-base">{{ langFlag }}</span>
+              <span class="hidden sm:inline">{{ langLabel }}</span>
+              <svg class="w-3.5 h-3.5 transition-transform" :class="{ 'rotate-180': langOpen }" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <transition enter-active-class="transition duration-150 ease-out" enter-from-class="opacity-0 scale-95"
+                        enter-to-class="opacity-100 scale-100" leave-active-class="transition duration-100 ease-in"
+                        leave-from-class="opacity-100 scale-100" leave-to-class="opacity-0 scale-95">
+              <div v-if="langOpen" class="lang-dropdown z-50">
+                <button v-for="l in langs" :key="l.code" @click="setLang(l.code)"
+                        class="flex items-center gap-2.5 w-full px-3 py-2 rounded-lg text-sm transition-colors"
+                        :class="lang === l.code ? 'bg-primary/10 text-primary' : 'text-white/60 hover:text-white hover:bg-white/5'">
+                  <span>{{ l.flag }}</span>
+                  <span>{{ l.name }}</span>
+                </button>
+              </div>
+            </transition>
+          </div>
+
+          <a href="https://wa.me/447513582537" target="_blank"
+             class="hidden sm:inline-flex items-center gap-2 bg-primary hover:bg-orange-600 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 hover:scale-105">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.913.913l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.387 0-4.597-.826-6.332-2.207l-.393-.312-2.646.887.887-2.646-.312-.393A9.953 9.953 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            WhatsApp
+          </a>
+
+          <button @click="mobileMenu = !mobileMenu" class="md:hidden text-white/60 hover:text-white p-2">
+            <svg v-if="!mobileMenu" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+            <svg v-else class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <transition enter-active-class="transition duration-200 ease-out" enter-from-class="opacity-0 -translate-y-2"
+                enter-to-class="opacity-100 translate-y-0" leave-active-class="transition duration-150 ease-in"
+                leave-from-class="opacity-100 translate-y-0" leave-to-class="opacity-0 -translate-y-2">
+      <div v-if="mobileMenu" class="md:hidden bg-dark/95 nav-blur border-t border-white/5 px-4 py-4 space-y-3">
+        <a v-for="item in navItems" :key="item.href" :href="item.href" @click="mobileMenu = false"
+           class="block text-white/70 hover:text-primary py-2 text-sm font-medium transition-colors">
+          {{ item.label }}
+        </a>
+        <a href="https://wa.me/447513582537" target="_blank"
+           class="flex items-center justify-center gap-2 bg-primary text-white px-5 py-3 rounded-full text-sm font-semibold mt-3">
+          WhatsApp
+        </a>
+      </div>
+    </transition>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative flex items-center justify-center pt-20 pb-24" style="min-height: 110vh;">
+    <div class="hero-columns pointer-events-none">
+      <div class="hero-col" v-for="(col, ci) in heroColumns" :key="ci">
+        <div class="hero-col-inner">
+          <img v-for="(img, ii) in col" :key="ii" :src="img" alt="Porto Belo" loading="lazy">
+          <img v-for="(img, ii) in col" :key="'dup-'+ii" :src="img" alt="Porto Belo" loading="lazy">
+        </div>
+      </div>
+    </div>
+    <div class="absolute inset-0 bg-darker/80 pointer-events-none"></div>
+    <div class="absolute inset-0 hero-gradient pointer-events-none"></div>
+
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative text-center">
+      <div data-aos="fade-up" data-aos-delay="100">
+        <span class="inline-flex items-center gap-2 text-primary text-sm font-semibold tracking-widest uppercase mb-6">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          Edinburgh, Scotland
+        </span>
+      </div>
+      <h1 data-aos="fade-up" data-aos-delay="200" class="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] mb-6">
+        {{ t.heroTitle1 }}
+        <span class="gradient-text"> {{ t.heroTitle2 }}</span>
+        {{ t.heroTitle3 }}
+      </h1>
+      <p data-aos="fade-up" data-aos-delay="300" class="text-white/50 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+        {{ t.heroDesc }}
+      </p>
+      <div data-aos="fade-up" data-aos-delay="400" class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="https://wa.me/447513582537" target="_blank"
+           class="inline-flex items-center justify-center gap-2 bg-primary hover:bg-orange-600 text-white px-8 py-4 rounded-full text-sm font-semibold transition-all duration-200 hover:scale-105 hover:shadow-lg hover:shadow-primary/25">
+          {{ t.ctaWhatsapp }}
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+        <a href="#empreendimentos"
+           class="inline-flex items-center justify-center gap-2 border border-white/20 hover:border-primary/50 text-white px-8 py-4 rounded-full text-sm font-semibold transition-all duration-200 hover:bg-white/5">
+          {{ t.ctaProperties }}
+        </a>
+      </div>
+    </div>
+
+    <div class="absolute bottom-0 left-0 right-0 border-y border-white/5 bg-dark/50 nav-blur py-4 overflow-hidden">
+      <div class="marquee-track">
+        <span v-for="i in 8" :key="i" class="flex items-center gap-3 px-8 text-sm font-semibold text-white/50 whitespace-nowrap">
+          <span class="w-1.5 h-1.5 bg-primary rounded-full"></span>
+          {{ t.marquee1 }}
+          <span class="text-primary">·</span>
+          {{ t.marquee2 }}
+          <span class="text-primary">·</span>
+          {{ t.marquee3 }}
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="py-16 border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+        <div v-for="(stat, i) in stats" :key="i" data-aos="fade-up" :data-aos-delay="i * 100"
+             class="text-center">
+          <div class="text-3xl sm:text-4xl lg:text-5xl font-bold gradient-text mb-2">{{ stat.value }}</div>
+          <div class="text-white/40 text-sm">{{ stat.label }}</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre -->
+  <section id="sobre" class="py-24 lg:py-32">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <span data-aos="fade-up" class="text-primary text-sm font-semibold tracking-widest uppercase mb-4 block">{{ t.aboutLabel }}</span>
+          <h2 data-aos="fade-up" data-aos-delay="100" class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-8 leading-tight">
+            {{ t.aboutTitle1 }}
+            <span class="gradient-text">{{ t.aboutTitle2 }}</span>
+          </h2>
+          <div data-aos="fade-up" data-aos-delay="200" class="space-y-4 text-white/50 leading-relaxed">
+            <p>{{ t.aboutP1 }}</p>
+            <p>{{ t.aboutP2 }}</p>
+            <p>{{ t.aboutP3 }}</p>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="300" class="mt-8">
+            <a href="https://wa.me/447513582537" target="_blank" class="inline-flex items-center gap-2 text-primary hover:text-orange-400 font-semibold text-sm transition-colors">
+              {{ t.aboutCta }}
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div data-aos="fade-left" data-aos-delay="200" class="relative flex justify-center lg:justify-end">
+          <div class="relative">
+            <div class="absolute -inset-4 bg-gradient-to-br from-primary/20 to-primary/5 rounded-3xl blur-2xl"></div>
+            <img src="assets/foto-carlos.png" alt="Carlos Gibran"
+                 class="relative w-80 lg:w-[420px] rounded-3xl shadow-2xl shadow-black/50 object-cover aspect-[3/4]">
+            <div class="absolute -top-4 -right-4 bg-dark/90 nav-blur border border-white/10 rounded-2xl px-5 py-3">
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                <span class="text-white/70 text-xs font-medium">Edinburgh, UK</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Por que investir -->
+  <section id="porque" class="py-24 lg:py-32 bg-dark/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span data-aos="fade-up" class="text-primary text-sm font-semibold tracking-widest uppercase mb-4 block">{{ t.whyLabel }}</span>
+        <h2 data-aos="fade-up" data-aos-delay="100" class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+          {{ t.whyTitle1 }} <span class="gradient-text">{{ t.whyTitle2 }}</span>
+        </h2>
+        <p data-aos="fade-up" data-aos-delay="200" class="text-white/50">
+          {{ t.whyDesc }}
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div v-for="(reason, i) in reasons" :key="i"
+             data-aos="fade-up" :data-aos-delay="i * 150"
+             class="group bg-darker/80 border border-white/5 rounded-2xl p-8 hover:border-primary/30 transition-all duration-500 card-glow relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2 group-hover:bg-primary/10 transition-all duration-500"></div>
+          <div class="relative">
+            <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors duration-300">
+              <span v-html="reason.icon" class="text-primary"></span>
+            </div>
+            <h3 class="text-white font-semibold text-xl mb-3">{{ reason.title }}</h3>
+            <p class="text-white/40 leading-relaxed text-sm">{{ reason.desc }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Como Funciona -->
+  <section id="servicos" class="py-24 lg:py-32">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span data-aos="fade-up" class="text-primary text-sm font-semibold tracking-widest uppercase mb-4 block">{{ t.howLabel }}</span>
+        <h2 data-aos="fade-up" data-aos-delay="100" class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+          {{ t.howTitle1 }} <span class="gradient-text">{{ t.howTitle2 }}</span>
+        </h2>
+        <p data-aos="fade-up" data-aos-delay="200" class="text-white/50">
+          {{ t.howDesc }}
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div v-for="(step, i) in steps" :key="i"
+             data-aos="fade-up" :data-aos-delay="i * 120"
+             class="relative bg-dark/80 border border-white/5 rounded-2xl p-6 hover:border-primary/30 transition-all duration-300 card-glow">
+          <div class="text-6xl font-bold text-primary/10 absolute top-4 right-4">{{ String(i + 1).padStart(2, '0') }}</div>
+          <div class="relative">
+            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+              <span v-html="step.icon" class="text-primary"></span>
+            </div>
+            <h3 class="text-white font-semibold mb-2">{{ step.title }}</h3>
+            <p class="text-white/40 text-sm leading-relaxed">{{ step.desc }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Empreendimentos -->
+  <section id="empreendimentos" class="py-24 lg:py-32 bg-dark/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span data-aos="fade-up" class="text-primary text-sm font-semibold tracking-widest uppercase mb-4 block">{{ t.propLabel }}</span>
+        <h2 data-aos="fade-up" data-aos-delay="100" class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+          {{ t.propTitle1 }} <span class="gradient-text">{{ t.propTitle2 }}</span> {{ t.propTitle3 }}
+        </h2>
+        <p data-aos="fade-up" data-aos-delay="200" class="text-white/50">
+          {{ t.propDesc }}
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div v-for="(prop, i) in properties" :key="i"
+             data-aos="fade-up" :data-aos-delay="i * 150"
+             class="group bg-darker/80 border border-white/5 rounded-2xl overflow-hidden hover:border-primary/30 transition-all duration-500 card-glow">
+          <div class="relative h-56 bg-gradient-to-br from-dark to-darker overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-br" :class="prop.gradient"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <span class="text-white/20 font-display text-2xl font-bold">{{ prop.name }}</span>
+            </div>
+            <div class="absolute top-4 left-4">
+              <span class="bg-primary/90 text-white text-xs font-semibold px-3 py-1.5 rounded-full">{{ prop.tag }}</span>
+            </div>
+            <div class="absolute top-4 right-4">
+              <span class="bg-dark/80 nav-blur text-white/70 text-xs font-medium px-3 py-1.5 rounded-full">{{ prop.location }}</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-white font-semibold text-lg mb-1">{{ prop.name }}</h3>
+            <p class="text-white/40 text-sm mb-4">{{ prop.desc }}</p>
+            <div class="flex items-center justify-between">
+              <div>
+                <span class="text-white/30 text-xs block">{{ t.propFrom }}</span>
+                <span class="text-primary font-bold text-lg">{{ prop.price }}</span>
+              </div>
+              <a href="https://wa.me/447513582537" target="_blank" class="w-10 h-10 bg-primary/10 hover:bg-primary/20 rounded-full flex items-center justify-center text-primary transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Depoimento / Identificação -->
+  <section class="py-24 lg:py-32 relative overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-primary/5 rounded-full blur-3xl"></div>
+    </div>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+      <div data-aos="zoom-in">
+        <svg class="w-12 h-12 text-primary/30 mx-auto mb-8" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+      </div>
+      <h2 data-aos="fade-up" data-aos-delay="100" class="font-display text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 leading-relaxed">
+        {{ t.quoteText1 }}
+        <span class="gradient-text">{{ t.quoteText2 }}</span>
+      </h2>
+      <p data-aos="fade-up" data-aos-delay="200" class="text-white/40 text-lg mb-8 max-w-2xl mx-auto">
+        {{ t.quoteDesc }}
+      </p>
+      <div data-aos="fade-up" data-aos-delay="300" class="flex items-center justify-center gap-4">
+        <img src="assets/foto-carlos.png" alt="Carlos Gibran" class="w-14 h-14 rounded-full object-cover">
+        <div class="text-left">
+          <span class="text-white font-semibold text-sm block">Carlos Gibran</span>
+          <span class="text-white/40 text-xs">{{ t.quoteRole }}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testemunhos -->
+  <section id="testemunhos" class="py-24 lg:py-32">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span data-aos="fade-up" class="text-primary text-sm font-semibold tracking-widest uppercase mb-4 block">{{ t.testLabel }}</span>
+        <h2 data-aos="fade-up" data-aos-delay="100" class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+          {{ t.testTitle1 }} <span class="gradient-text">{{ t.testTitle2 }}</span>
+        </h2>
+        <p data-aos="fade-up" data-aos-delay="200" class="text-white/50">
+          {{ t.testDesc }}
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div v-for="(tt, i) in testimonials" :key="i"
+             data-aos="fade-up" :data-aos-delay="i * 150"
+             class="bg-dark/80 border border-white/5 rounded-2xl p-6 hover:border-primary/20 transition-all duration-300 card-glow flex flex-col">
+          <div class="flex items-center gap-1 mb-4">
+            <svg v-for="s in 5" :key="s" class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-white/50 text-sm leading-relaxed mb-6 flex-1">{{ tt.text }}</p>
+          <div class="flex items-center gap-3 pt-4 border-t border-white/5">
+            <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+              <span class="text-primary font-semibold text-sm">{{ tt.initials }}</span>
+            </div>
+            <div>
+              <span class="text-white font-medium text-sm block">{{ tt.name }}</span>
+              <span class="text-white/30 text-xs">{{ tt.location }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="duvidas" class="py-24 lg:py-32 bg-dark/50">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span data-aos="fade-up" class="text-primary text-sm font-semibold tracking-widest uppercase mb-4 block">{{ t.faqLabel }}</span>
+        <h2 data-aos="fade-up" data-aos-delay="100" class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+          {{ t.faqTitle1 }} <span class="gradient-text">{{ t.faqTitle2 }}</span>
+        </h2>
+      </div>
+
+      <div class="space-y-3">
+        <div v-for="(faq, i) in faqs" :key="i" data-aos="fade-up" :data-aos-delay="i * 80"
+             class="border border-white/5 rounded-xl overflow-hidden hover:border-white/10 transition-colors duration-300"
+             :class="{ 'border-primary/20': activeFaq === i }">
+          <button @click="activeFaq = activeFaq === i ? null : i"
+                  class="w-full flex items-center justify-between p-5 text-left">
+            <span class="text-white font-medium text-sm pr-4">{{ faq.q }}</span>
+            <svg class="w-5 h-5 text-primary flex-shrink-0 transition-transform duration-300"
+                 :class="{ 'rotate-180': activeFaq === i }"
+                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-content" :class="{ 'open': activeFaq === i }">
+            <div class="faq-inner">
+              <div class="px-5 pb-5 text-white/40 text-sm leading-relaxed">{{ faq.a }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="py-24 lg:py-32 relative overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
+      <span data-aos="fade-up" class="text-primary text-sm font-semibold tracking-widest uppercase mb-4 block">{{ t.contactLabel }}</span>
+      <h2 data-aos="fade-up" data-aos-delay="100" class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+        {{ t.contactTitle1 }}
+        <span class="gradient-text">{{ t.contactTitle2 }}</span>
+      </h2>
+      <p data-aos="fade-up" data-aos-delay="200" class="text-white/50 mb-12 leading-relaxed max-w-2xl mx-auto">
+        {{ t.contactDesc }}
+      </p>
+
+      <div data-aos="fade-up" data-aos-delay="300" class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+        <a href="https://wa.me/447513582537" target="_blank"
+           class="inline-flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-full text-sm font-semibold transition-all duration-200 hover:scale-105 hover:shadow-lg hover:shadow-green-500/25">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.913.913l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.387 0-4.597-.826-6.332-2.207l-.393-.312-2.646.887.887-2.646-.312-.393A9.953 9.953 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          WhatsApp · +44 7513 582537
+        </a>
+        <a href="https://instagram.com/onovocarlos" target="_blank"
+           class="inline-flex items-center justify-center gap-3 border border-white/20 hover:border-pink-500/50 text-white px-8 py-4 rounded-full text-sm font-semibold transition-all duration-200 hover:bg-white/5">
+          <svg class="w-5 h-5 text-pink-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          @onovocarlos
+        </a>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="400" class="inline-flex items-center gap-3 bg-primary/5 border border-primary/10 rounded-full px-6 py-3">
+        <svg class="w-5 h-5 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <p class="text-white/50 text-sm">{{ t.contactTimezone }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/5 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-3">
+          <img src="assets/logo.png" alt="Carlos Gibran Logo" class="h-8 w-auto">
+          <div>
+            <span class="text-white/40 text-sm block">Carlos Gibran · CRECI 23809</span>
+            <span class="text-white/30 text-xs">Itapema · Porto Belo · SC</span>
+          </div>
+        </div>
+        <div class="text-white/30 text-xs text-center md:text-right">
+          <p>&copy; 2026 Carlos Gibran. {{ t.footerRights }}</p>
+          <p class="mt-1">{{ t.footerDev }} <a href="#" class="text-primary/60 hover:text-primary transition-colors">Garbson Souza</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/447513582537" target="_blank"
+     class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg shadow-green-500/30 transition-all duration-200 hover:scale-110">
+    <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.913.913l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.387 0-4.597-.826-6.332-2.207l-.393-.312-2.646.887.887-2.646-.312-.393A9.953 9.953 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+  </a>
+
+</div>
+
+<!-- Vue 3 -->
+<script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+const { createApp, ref, computed, onMounted, onUnmounted, watch } = Vue;
+
+createApp({
+  setup() {
+    const scrolled = ref(false);
+    const mobileMenu = ref(false);
+    const activeFaq = ref(null);
+    const langOpen = ref(false);
+    const lang = ref(localStorage.getItem('site-lang') || 'pt');
+
+    const langs = [
+      { code: 'pt', flag: '🇧🇷', name: 'Português' },
+      { code: 'es', flag: '🇪🇸', name: 'Español' },
+      { code: 'en', flag: '🇬🇧', name: 'English' },
+    ];
+
+    const langFlag = computed(() => langs.find(l => l.code === lang.value)?.flag || '🇧🇷');
+    const langLabel = computed(() => {
+      const labels = { pt: 'PT', en: 'EN', es: 'ES' };
+      return labels[lang.value] || 'PT';
+    });
+
+    const toggleLang = () => {
+      langOpen.value = !langOpen.value;
+    };
+
+    const setLang = (code) => {
+      lang.value = code;
+      langOpen.value = false;
+      localStorage.setItem('site-lang', code);
+    };
+
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.lang-menu')) langOpen.value = false;
+    });
+
+    const heroColumns = [
+      ['assets/1312e12d437fa9bf386f309a3ef35845.jpg', 'assets/3b9c54fc408c6fd10a2a90be817e3ddc.jpg', 'assets/70eaedd380455355df1d0026e7c86d2f.jpg'],
+      ['assets/1bac0b5fe647f236ea0da6bf6fe8d81a.jpg', 'assets/41f340be9c93634e56857bc27b863066.jpg', 'assets/d372dcd01683484a171dfa1ab69d18df.jpg'],
+      ['assets/2a86a575e8d1ebb204c5be6aebb04e55.jpg', 'assets/59e4615195b26025d063767d81bdd06d.jpg', 'assets/3dff6fce6e92690356e6a332647c0fc0.jpg'],
+      ['assets/e0f00a8ad6dd0e207fbf76d01837881e.jpg', 'assets/57f94c41d3c9305f5077c8499d038582.jpg', 'assets/e05329fed862d95bbad9b89b6d4dbacd.jpg'],
+    ];
+
+    const translations = {
+      pt: {
+        heroTitle1: 'Mora fora e quer', heroTitle2: 'investir', heroTitle3: 'no Brasil?',
+        heroDesc: 'Eu também moro no exterior. Sei exatamente como é querer investir no Brasil de longe. Te ajudo a fazer isso com segurança, do início ao fim, 100% online.',
+        ctaWhatsapp: 'Fale Comigo no WhatsApp', ctaProperties: 'Ver Oportunidades',
+        marquee1: 'Financiamento direto com a construtora', marquee2: 'Sem juros', marquee3: 'Parcele em até 120 vezes',
+        aboutLabel: 'Quem sou eu',
+        aboutTitle1: 'Um brasileiro no exterior que entende a sua ', aboutTitle2: 'realidade',
+        aboutP1: 'Meu nome é Carlos Gibran, tenho 35 anos, sou casado, pai e moro em Edinburgh, na Escócia. Sei na pele o que é viver longe do Brasil e querer construir patrimônio no nosso país. Foi essa vivência que me tornou o profissional que sou hoje.',
+        aboutP2: 'Com mais de 15 anos no mercado imobiliário e credenciado pelo CRECI (23809), me especializei em ajudar brasileiros que vivem no exterior a investir com segurança nas regiões de Itapema e Porto Belo — duas das que mais valorizam no litoral catarinense.',
+        aboutP3: 'Meu atendimento é totalmente online, prático e transparente. Guiado pelos meus valores cristãos, conduzo cada negociação com ética, compromisso e a dedicação de quem entende que investir de longe exige confiança acima de tudo.',
+        aboutCta: 'Vamos conversar — eu entendo a sua situação',
+        whyLabel: 'Por que investir', whyTitle1: 'O litoral catarinense é o lugar certo para o seu', whyTitle2: 'dinheiro crescer',
+        whyDesc: 'Itapema e Porto Belo estão entre as regiões que mais valorizam no Brasil. Quem investiu nos últimos anos já viu retornos expressivos.',
+        howLabel: 'Como funciona', howTitle1: 'Investir do exterior nunca foi tão', howTitle2: 'simples',
+        howDesc: 'Todo o processo é feito online, no seu fuso horário, com acompanhamento em cada etapa',
+        propLabel: 'Oportunidades', propTitle1: 'Imóveis', propTitle2: 'selecionados', propTitle3: 'para quem está longe',
+        propDesc: 'Cada imóvel é criteriosamente escolhido pensando em valorização, segurança e facilidade para quem compra do exterior',
+        propFrom: 'A partir de',
+        quoteText1: 'Eu sei o que é querer investir no Brasil morando longe. A distância, o fuso horário, a insegurança de não estar lá... ',
+        quoteText2: 'Eu passo por isso todos os dias.',
+        quoteDesc: 'Por isso criei um atendimento feito especialmente para quem, assim como eu, escolheu viver fora mas não desistiu de construir patrimônio no Brasil.',
+        quoteRole: 'Corretor de Imóveis · Edinburgh, UK',
+        testLabel: 'Depoimentos', testTitle1: 'Quem já investiu', testTitle2: 'recomenda',
+        testDesc: 'Brasileiros no exterior que confiaram no Carlos para investir no Brasil',
+        faqLabel: 'Dúvidas', faqTitle1: 'Perguntas de quem investe', faqTitle2: 'do exterior',
+        contactLabel: 'Contato', contactTitle1: 'Vamos conversar sobre o seu próximo ', contactTitle2: 'investimento',
+        contactDesc: 'Não importa em que país você está — meu atendimento é online, no seu horário, e com toda a segurança que você precisa para investir de longe.',
+        contactTimezone: 'Atendo em qualquer fuso horário',
+        footerRights: 'Todos os direitos reservados.', footerDev: 'Desenvolvido por',
+      },
+      en: {
+        heroTitle1: 'Living abroad and want to', heroTitle2: 'invest', heroTitle3: 'in Brazil?',
+        heroDesc: 'I also live abroad. I know exactly what it\'s like to want to invest in Brazil from afar. I help you do it safely, from start to finish, 100% online.',
+        ctaWhatsapp: 'Talk to Me on WhatsApp', ctaProperties: 'View Opportunities',
+        marquee1: 'Direct financing with the developer', marquee2: 'No interest', marquee3: 'Up to 120 installments',
+        aboutLabel: 'About me',
+        aboutTitle1: 'A Brazilian abroad who understands your ', aboutTitle2: 'reality',
+        aboutP1: 'My name is Carlos Gibran, I\'m 35 years old, married, a father, and I live in Edinburgh, Scotland. I know firsthand what it\'s like to live far from Brazil and want to build assets back home. This experience shaped the professional I am today.',
+        aboutP2: 'With over 15 years in real estate and certified by CRECI (23809), I specialize in helping Brazilians living abroad invest safely in the regions of Itapema and Porto Belo — two of the fastest-appreciating areas on the coast of Santa Catarina.',
+        aboutP3: 'My service is fully online, practical, and transparent. Guided by my Christian values, I conduct every negotiation with ethics, commitment, and the dedication of someone who understands that investing from abroad requires trust above all.',
+        aboutCta: 'Let\'s talk — I understand your situation',
+        whyLabel: 'Why invest', whyTitle1: 'The coast of Santa Catarina is the right place for your', whyTitle2: 'money to grow',
+        whyDesc: 'Itapema and Porto Belo are among the fastest-appreciating regions in Brazil. Those who invested in recent years have already seen impressive returns.',
+        howLabel: 'How it works', howTitle1: 'Investing from abroad has never been so', howTitle2: 'simple',
+        howDesc: 'The entire process is done online, in your timezone, with guidance at every step',
+        propLabel: 'Opportunities', propTitle1: 'Properties', propTitle2: 'selected', propTitle3: 'for those living abroad',
+        propDesc: 'Each property is carefully chosen with appreciation, security, and convenience in mind for buyers abroad',
+        propFrom: 'Starting at',
+        quoteText1: 'I know what it\'s like to want to invest in Brazil while living far away. The distance, the timezone, the insecurity of not being there... ',
+        quoteText2: 'I go through this every day.',
+        quoteDesc: 'That\'s why I created a service especially for those who, like me, chose to live abroad but didn\'t give up on building assets in Brazil.',
+        quoteRole: 'Real Estate Agent · Edinburgh, UK',
+        testLabel: 'Testimonials', testTitle1: 'Those who invested', testTitle2: 'recommend',
+        testDesc: 'Brazilians abroad who trusted Carlos to invest in Brazil',
+        faqLabel: 'FAQ', faqTitle1: 'Questions from those investing', faqTitle2: 'from abroad',
+        contactLabel: 'Contact', contactTitle1: 'Let\'s talk about your next ', contactTitle2: 'investment',
+        contactDesc: 'No matter what country you\'re in — my service is online, on your schedule, and with all the security you need to invest from afar.',
+        contactTimezone: 'Available in any timezone',
+        footerRights: 'All rights reserved.', footerDev: 'Developed by',
+      },
+      es: {
+        heroTitle1: '¿Vives fuera y quieres', heroTitle2: 'invertir', heroTitle3: 'en Brasil?',
+        heroDesc: 'Yo también vivo en el exterior. Sé exactamente lo que es querer invertir en Brasil desde lejos. Te ayudo a hacerlo con seguridad, de principio a fin, 100% online.',
+        ctaWhatsapp: 'Habla Conmigo por WhatsApp', ctaProperties: 'Ver Oportunidades',
+        marquee1: 'Financiamiento directo con la constructora', marquee2: 'Sin intereses', marquee3: 'Hasta 120 cuotas',
+        aboutLabel: 'Quién soy',
+        aboutTitle1: 'Un brasileño en el exterior que entiende tu ', aboutTitle2: 'realidad',
+        aboutP1: 'Mi nombre es Carlos Gibran, tengo 35 años, soy casado, padre y vivo en Edinburgh, Escocia. Sé en carne propia lo que es vivir lejos de Brasil y querer construir patrimonio en nuestro país. Esa vivencia me convirtió en el profesional que soy hoy.',
+        aboutP2: 'Con más de 15 años en el mercado inmobiliario y acreditado por el CRECI (23809), me especialicé en ayudar a brasileños que viven en el exterior a invertir con seguridad en las regiones de Itapema y Porto Belo — dos de las que más se valorizan en el litoral catarinense.',
+        aboutP3: 'Mi atención es totalmente online, práctica y transparente. Guiado por mis valores cristianos, conduzco cada negociación con ética, compromiso y la dedicación de quien entiende que invertir desde lejos exige confianza por encima de todo.',
+        aboutCta: 'Conversemos — yo entiendo tu situación',
+        whyLabel: 'Por qué invertir', whyTitle1: 'El litoral catarinense es el lugar ideal para que tu', whyTitle2: 'dinero crezca',
+        whyDesc: 'Itapema y Porto Belo están entre las regiones que más se valorizan en Brasil. Quienes invirtieron en los últimos años ya vieron retornos expresivos.',
+        howLabel: 'Cómo funciona', howTitle1: 'Invertir desde el exterior nunca fue tan', howTitle2: 'simple',
+        howDesc: 'Todo el proceso se hace online, en tu zona horaria, con acompañamiento en cada etapa',
+        propLabel: 'Oportunidades', propTitle1: 'Inmuebles', propTitle2: 'seleccionados', propTitle3: 'para quienes están lejos',
+        propDesc: 'Cada inmueble es cuidadosamente elegido pensando en valorización, seguridad y facilidad para quien compra desde el exterior',
+        propFrom: 'Desde',
+        quoteText1: 'Sé lo que es querer invertir en Brasil viviendo lejos. La distancia, la zona horaria, la inseguridad de no estar allá... ',
+        quoteText2: 'Yo paso por esto todos los días.',
+        quoteDesc: 'Por eso creé una atención hecha especialmente para quienes, así como yo, eligieron vivir fuera pero no desistieron de construir patrimonio en Brasil.',
+        quoteRole: 'Corredor de Inmuebles · Edinburgh, UK',
+        testLabel: 'Testimonios', testTitle1: 'Quienes ya invirtieron', testTitle2: 'recomiendan',
+        testDesc: 'Brasileños en el exterior que confiaron en Carlos para invertir en Brasil',
+        faqLabel: 'Preguntas', faqTitle1: 'Preguntas de quienes invierten', faqTitle2: 'desde el exterior',
+        contactLabel: 'Contacto', contactTitle1: 'Conversemos sobre tu próxima ', contactTitle2: 'inversión',
+        contactDesc: 'No importa en qué país estés — mi atención es online, en tu horario, y con toda la seguridad que necesitas para invertir desde lejos.',
+        contactTimezone: 'Atiendo en cualquier zona horaria',
+        footerRights: 'Todos los derechos reservados.', footerDev: 'Desarrollado por',
+      },
+    };
+
+    const t = computed(() => translations[lang.value] || translations.pt);
+
+    const navItems = computed(() => {
+      const labels = {
+        pt: ['Sobre', 'Por que Investir', 'Como Funciona', 'Imóveis', 'Depoimentos', 'Dúvidas', 'Contato'],
+        en: ['About', 'Why Invest', 'How it Works', 'Properties', 'Testimonials', 'FAQ', 'Contact'],
+        es: ['Sobre mí', 'Por qué Invertir', 'Cómo Funciona', 'Inmuebles', 'Testimonios', 'Preguntas', 'Contacto'],
+      };
+      const hrefs = ['#sobre', '#porque', '#servicos', '#empreendimentos', '#testemunhos', '#duvidas', '#contato'];
+      return (labels[lang.value] || labels.pt).map((label, i) => ({ label, href: hrefs[i] }));
+    });
+
+    const stats = computed(() => {
+      const data = {
+        pt: [
+          { value: '15+', label: 'Anos de mercado imobiliário' },
+          { value: '100%', label: 'Atendimento online' },
+          { value: 'CRECI', label: '23809 credenciado' },
+          { value: '🇬🇧', label: 'Mora no exterior como você' },
+        ],
+        en: [
+          { value: '15+', label: 'Years in real estate' },
+          { value: '100%', label: 'Online service' },
+          { value: 'CRECI', label: '23809 certified' },
+          { value: '🇬🇧', label: 'Lives abroad like you' },
+        ],
+        es: [
+          { value: '15+', label: 'Años en el mercado inmobiliario' },
+          { value: '100%', label: 'Atención online' },
+          { value: 'CRECI', label: '23809 acreditado' },
+          { value: '🇬🇧', label: 'Vive en el exterior como tú' },
+        ],
+      };
+      return data[lang.value] || data.pt;
+    });
+
+    const reasons = computed(() => {
+      const icons = [
+        '<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>',
+        '<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>',
+        '<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>',
+      ];
+      const data = {
+        pt: [
+          { title: 'Valorização Acelerada', desc: 'Itapema e Porto Belo registram índices de valorização entre 15% e 20% ao ano, muito acima da média nacional. Seu dinheiro cresce mesmo enquanto você está longe.' },
+          { title: 'Renda em Real e Moeda Forte', desc: 'Imóveis de temporada na região geram renda em reais que, combinada com o câmbio favorável, potencializa seu retorno. Diversifique seu patrimônio entre moedas.' },
+          { title: 'Segurança Jurídica', desc: 'Todo processo é feito com escritura pública, registro em cartório e acompanhamento jurídico. Você investe com a mesma segurança de quem está no Brasil.' },
+        ],
+        en: [
+          { title: 'Accelerated Appreciation', desc: 'Itapema and Porto Belo record appreciation rates between 15% and 20% per year, well above the national average. Your money grows even while you\'re away.' },
+          { title: 'Income in Reais & Strong Currency', desc: 'Vacation rental properties in the region generate income in reais which, combined with favorable exchange rates, boosts your returns. Diversify your assets across currencies.' },
+          { title: 'Legal Security', desc: 'The entire process is done with public deed, notary registration, and legal support. You invest with the same security as someone in Brazil.' },
+        ],
+        es: [
+          { title: 'Valorización Acelerada', desc: 'Itapema y Porto Belo registran índices de valorización entre 15% y 20% al año, muy por encima del promedio nacional. Tu dinero crece incluso mientras estás lejos.' },
+          { title: 'Renta en Reales y Moneda Fuerte', desc: 'Inmuebles de temporada en la región generan renta en reales que, combinada con el cambio favorable, potencializa tu retorno. Diversifica tu patrimonio entre monedas.' },
+          { title: 'Seguridad Jurídica', desc: 'Todo el proceso se hace con escritura pública, registro notarial y acompañamiento jurídico. Inviertes con la misma seguridad de quien está en Brasil.' },
+        ],
+      };
+      return (data[lang.value] || data.pt).map((item, i) => ({ ...item, icon: icons[i] }));
+    });
+
+    const steps = computed(() => {
+      const icons = [
+        '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>',
+        '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>',
+        '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>',
+        '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>',
+      ];
+      const data = {
+        pt: [
+          { title: 'Conversa Inicial', desc: 'Entendo seu perfil, objetivos e orçamento por videochamada. Sem compromisso, sem pressa.' },
+          { title: 'Seleção Personalizada', desc: 'Escolho as melhores opções em Itapema e Porto Belo para o seu perfil. Vídeos, fotos e dados completos.' },
+          { title: 'Negociação e Documentação', desc: 'Cuido de toda a negociação e documentação. Contratos digitais, assinatura eletrônica, tudo à distância.' },
+          { title: 'Acompanhamento Contínuo', desc: 'Mesmo após a compra, sigo acompanhando seu investimento. Obra, entrega e gestão de locação.' },
+        ],
+        en: [
+          { title: 'Initial Conversation', desc: 'I understand your profile, goals, and budget via video call. No commitment, no pressure.' },
+          { title: 'Personalized Selection', desc: 'I choose the best options in Itapema and Porto Belo for your profile. Videos, photos, and complete data.' },
+          { title: 'Negotiation & Documentation', desc: 'I handle all negotiation and documentation. Digital contracts, electronic signatures, everything remotely.' },
+          { title: 'Ongoing Support', desc: 'Even after the purchase, I continue monitoring your investment. Construction, delivery, and rental management.' },
+        ],
+        es: [
+          { title: 'Conversación Inicial', desc: 'Entiendo tu perfil, objetivos y presupuesto por videollamada. Sin compromiso, sin prisa.' },
+          { title: 'Selección Personalizada', desc: 'Elijo las mejores opciones en Itapema y Porto Belo para tu perfil. Videos, fotos y datos completos.' },
+          { title: 'Negociación y Documentación', desc: 'Me encargo de toda la negociación y documentación. Contratos digitales, firma electrónica, todo a distancia.' },
+          { title: 'Acompañamiento Continuo', desc: 'Incluso después de la compra, sigo acompañando tu inversión. Obra, entrega y gestión de alquiler.' },
+        ],
+      };
+      return (data[lang.value] || data.pt).map((item, i) => ({ ...item, icon: icons[i] }));
+    });
+
+    const properties = computed(() => {
+      const gradients = [
+        'from-orange-900/30 to-amber-900/20', 'from-blue-900/30 to-cyan-900/20', 'from-emerald-900/30 to-teal-900/20',
+        'from-purple-900/30 to-violet-900/20', 'from-rose-900/30 to-pink-900/20', 'from-sky-900/30 to-indigo-900/20',
+      ];
+      const data = {
+        pt: [
+          { name: 'Vision Home Club', location: 'Porto Belo', price: 'R$ 650.000', tag: 'Destaque', desc: 'Frente para o mar com planta inteligente e alto potencial de valorização.' },
+          { name: 'Lagom Perequê', location: 'Porto Belo', price: 'R$ 480.000', tag: 'Lançamento', desc: 'Design escandinavo no coração do Perequê. Ideal para renda de temporada.' },
+          { name: 'Sôta Residence', location: 'Itapema', price: 'R$ 520.000', tag: 'Novo', desc: 'Acabamento premium em localização estratégica na meia praia.' },
+          { name: 'Orgânica Tower', location: 'Itapema', price: 'R$ 890.000', tag: 'Alto Padrão', desc: 'Conceito biofílico com vista permanente para o mar.' },
+          { name: 'Miramar Residence', location: 'Porto Belo', price: 'R$ 380.000', tag: 'Oportunidade', desc: 'Entrada facilitada e parcelas que cabem no bolso de quem ganha em moeda forte.' },
+          { name: 'Atlantic Premium', location: 'Itapema', price: 'R$ 750.000', tag: 'Premium', desc: 'Infraestrutura de resort com gestão de locação inclusa.' },
+        ],
+        en: [
+          { name: 'Vision Home Club', location: 'Porto Belo', price: 'R$ 650,000', tag: 'Featured', desc: 'Oceanfront with smart floor plan and high appreciation potential.' },
+          { name: 'Lagom Perequê', location: 'Porto Belo', price: 'R$ 480,000', tag: 'New Launch', desc: 'Scandinavian design in the heart of Perequê. Ideal for vacation rental income.' },
+          { name: 'Sôta Residence', location: 'Itapema', price: 'R$ 520,000', tag: 'New', desc: 'Premium finishes in a strategic location on Meia Praia beach.' },
+          { name: 'Orgânica Tower', location: 'Itapema', price: 'R$ 890,000', tag: 'High-End', desc: 'Biophilic concept with permanent ocean view.' },
+          { name: 'Miramar Residence', location: 'Porto Belo', price: 'R$ 380,000', tag: 'Opportunity', desc: 'Easy down payment and installments perfect for those earning in strong currency.' },
+          { name: 'Atlantic Premium', location: 'Itapema', price: 'R$ 750,000', tag: 'Premium', desc: 'Resort infrastructure with rental management included.' },
+        ],
+        es: [
+          { name: 'Vision Home Club', location: 'Porto Belo', price: 'R$ 650.000', tag: 'Destacado', desc: 'Frente al mar con planta inteligente y alto potencial de valorización.' },
+          { name: 'Lagom Perequê', location: 'Porto Belo', price: 'R$ 480.000', tag: 'Lanzamiento', desc: 'Diseño escandinavo en el corazón del Perequê. Ideal para renta de temporada.' },
+          { name: 'Sôta Residence', location: 'Itapema', price: 'R$ 520.000', tag: 'Nuevo', desc: 'Acabado premium en ubicación estratégica en meia praia.' },
+          { name: 'Orgânica Tower', location: 'Itapema', price: 'R$ 890.000', tag: 'Alto Estándar', desc: 'Concepto biofílico con vista permanente al mar.' },
+          { name: 'Miramar Residence', location: 'Porto Belo', price: 'R$ 380.000', tag: 'Oportunidad', desc: 'Entrada facilitada y cuotas accesibles para quien gana en moneda fuerte.' },
+          { name: 'Atlantic Premium', location: 'Itapema', price: 'R$ 750.000', tag: 'Premium', desc: 'Infraestructura de resort con gestión de alquiler incluida.' },
+        ],
+      };
+      return (data[lang.value] || data.pt).map((item, i) => ({ ...item, gradient: gradients[i] }));
+    });
+
+    const testimonials = computed(() => {
+      const data = {
+        pt: [
+          { name: 'Rafael Mendes', initials: 'RM', location: 'Londres, Reino Unido', text: 'Morar em Londres e comprar um apartamento em Itapema parecia impossível. O Carlos cuidou de absolutamente tudo — documentação, negociação, vistoria. Recebi as chaves sem precisar ir ao Brasil. Profissional impecável.' },
+          { name: 'Ana Paula Costa', initials: 'AC', location: 'Dublin, Irlanda', text: 'O que me conquistou foi a transparência. O Carlos manda vídeo de tudo, explica cada detalhe e nunca me pressionou. Comprei meu segundo imóvel com ele e já estou de olho no terceiro.' },
+          { name: 'Thiago Oliveira', initials: 'TO', location: 'Toronto, Canadá', text: 'Eu tinha muito medo de ser enganado comprando de longe. O Carlos foi super paciente, tirou todas as dúvidas e me mostrou que dava para investir com segurança. Hoje meu apartamento em Porto Belo já valorizou mais de 20%.' },
+          { name: 'Camila Santos', initials: 'CS', location: 'Lisboa, Portugal', text: 'Atendimento no meu horário, sem pressa, sem enrolação. O Carlos entende que a gente tem uma rotina diferente morando fora. Recomendo de olhos fechados para qualquer brasileiro no exterior.' },
+          { name: 'Marcos Vieira', initials: 'MV', location: 'Sydney, Austrália', text: 'Mesmo com a diferença de fuso horário enorme, o Carlos sempre foi super acessível. Fez videochamadas de madrugada para se adaptar ao meu horário. Isso mostra o comprometimento dele.' },
+          { name: 'Juliana Ferreira', initials: 'JF', location: 'Miami, EUA', text: 'Investi em dois apartamentos em Itapema e os dois já estão gerando renda com aluguel de temporada. O Carlos me indicou as melhores opções e cuidou de tudo. Melhor decisão que tomei.' },
+        ],
+        en: [
+          { name: 'Rafael Mendes', initials: 'RM', location: 'London, UK', text: 'Living in London and buying an apartment in Itapema seemed impossible. Carlos took care of absolutely everything — documentation, negotiation, inspection. I got the keys without ever going to Brazil. Impeccable professional.' },
+          { name: 'Ana Paula Costa', initials: 'AC', location: 'Dublin, Ireland', text: 'What won me over was the transparency. Carlos sends videos of everything, explains every detail, and never pressured me. I bought my second property with him and I\'m already eyeing a third.' },
+          { name: 'Thiago Oliveira', initials: 'TO', location: 'Toronto, Canada', text: 'I was really afraid of being scammed buying from afar. Carlos was super patient, answered all my questions, and showed me it was possible to invest safely. Today my apartment in Porto Belo has appreciated over 20%.' },
+          { name: 'Camila Santos', initials: 'CS', location: 'Lisbon, Portugal', text: 'Service on my schedule, no rush, no hassle. Carlos understands that we have a different routine living abroad. I recommend him wholeheartedly to any Brazilian abroad.' },
+          { name: 'Marcos Vieira', initials: 'MV', location: 'Sydney, Australia', text: 'Even with the enormous timezone difference, Carlos was always super accessible. He did video calls in the middle of the night to accommodate my schedule. That shows his commitment.' },
+          { name: 'Juliana Ferreira', initials: 'JF', location: 'Miami, USA', text: 'I invested in two apartments in Itapema and both are already generating income from vacation rentals. Carlos recommended the best options and took care of everything. Best decision I ever made.' },
+        ],
+        es: [
+          { name: 'Rafael Mendes', initials: 'RM', location: 'Londres, Reino Unido', text: 'Vivir en Londres y comprar un departamento en Itapema parecía imposible. Carlos se encargó de absolutamente todo — documentación, negociación, inspección. Recibí las llaves sin necesidad de ir a Brasil. Profesional impecable.' },
+          { name: 'Ana Paula Costa', initials: 'AC', location: 'Dublín, Irlanda', text: 'Lo que me conquistó fue la transparencia. Carlos envía video de todo, explica cada detalle y nunca me presionó. Compré mi segundo inmueble con él y ya estoy viendo el tercero.' },
+          { name: 'Thiago Oliveira', initials: 'TO', location: 'Toronto, Canadá', text: 'Tenía mucho miedo de ser engañado comprando de lejos. Carlos fue super paciente, sacó todas las dudas y me mostró que era posible invertir con seguridad. Hoy mi departamento en Porto Belo ya se valorizó más de 20%.' },
+          { name: 'Camila Santos', initials: 'CS', location: 'Lisboa, Portugal', text: 'Atención en mi horario, sin prisa, sin enredo. Carlos entiende que tenemos una rutina diferente viviendo fuera. Lo recomiendo totalmente a cualquier brasileño en el exterior.' },
+          { name: 'Marcos Vieira', initials: 'MV', location: 'Sídney, Australia', text: 'Incluso con la enorme diferencia horaria, Carlos siempre fue super accesible. Hizo videollamadas de madrugada para adaptarse a mi horario. Eso muestra su compromiso.' },
+          { name: 'Juliana Ferreira', initials: 'JF', location: 'Miami, EE.UU.', text: 'Invertí en dos departamentos en Itapema y los dos ya están generando renta con alquiler de temporada. Carlos me indicó las mejores opciones y se encargó de todo. Mejor decisión que tomé.' },
+        ],
+      };
+      return data[lang.value] || data.pt;
+    });
+
+    const faqs = computed(() => {
+      const data = {
+        pt: [
+          { q: 'Consigo comprar um imóvel no Brasil morando no exterior?', a: 'Sim! Não existe nenhuma restrição para brasileiros que moram fora comprarem imóveis no Brasil. Todo o processo pode ser feito remotamente, com documentos digitais e procuração quando necessário. Eu mesmo moro na Escócia e ajudo dezenas de clientes nessa situação.' },
+          { q: 'Como funciona o financiamento direto com a construtora?', a: 'Diferente do financiamento bancário, o financiamento direto com a construtora é mais flexível. Normalmente a entrada é de 20% a 30%, parcelada durante a obra, e o saldo pode ser financiado em até 120 meses. Não precisa de comprovação de renda no Brasil e as parcelas são ajustadas pelo CUB/SC.' },
+          { q: 'Por que Itapema e Porto Belo são bons investimentos?', a: 'Essas duas cidades estão entre as que mais valorizam no Brasil, com índices entre 15% e 20% ao ano. Porto Belo está recebendo grandes investimentos em infraestrutura (marina, shopping, orla) e o turismo já traz mais de 1 milhão de visitantes por temporada. É o momento certo para entrar.' },
+          { q: 'É seguro comprar imóvel na planta do exterior?', a: 'Sim, desde que com as devidas precauções que eu tomo por você: verifico a idoneidade da construtora, o registro do empreendimento, toda a documentação legal e acompanho a obra pessoalmente. Você recebe atualizações por vídeo e fotos regularmente.' },
+          { q: 'Consigo ter renda com aluguel mesmo morando fora?', a: 'Com certeza. Muitos empreendimentos na região oferecem gestão de locação por temporada. A rentabilidade média fica entre 6% e 10% ao ano. Eu te ajudo a escolher o imóvel com melhor potencial de renda e posso indicar administradoras de confiança.' },
+          { q: 'Como funciona o atendimento do Carlos?', a: 'Meu atendimento é 100% online e personalizado. Fazemos videochamadas no horário que for melhor para você (atendo em qualquer fuso horário), envio vídeos dos imóveis, fotos atualizadas das obras e cuido de toda a documentação. Você não precisa vir ao Brasil para investir.' },
+          { q: 'Preciso ter CPF ativo e conta no Brasil?', a: 'Sim, é necessário ter CPF regularizado. Caso sua situação fiscal precise de ajustes, posso orientá-lo sobre os passos necessários. Quanto à conta bancária, é recomendável ter uma conta no Brasil para facilitar as transações, mas existem alternativas que podemos avaliar juntos.' },
+        ],
+        en: [
+          { q: 'Can I buy property in Brazil while living abroad?', a: 'Yes! There are no restrictions for Brazilians living abroad buying property in Brazil. The entire process can be done remotely, with digital documents and power of attorney when needed. I myself live in Scotland and help dozens of clients in this situation.' },
+          { q: 'How does direct financing with the developer work?', a: 'Unlike bank financing, direct financing with the developer is more flexible. Typically the down payment is 20% to 30%, paid in installments during construction, and the balance can be financed in up to 120 months. No proof of income in Brazil is needed and installments are adjusted by CUB/SC.' },
+          { q: 'Why are Itapema and Porto Belo good investments?', a: 'These two cities are among the fastest-appreciating in Brazil, with rates between 15% and 20% per year. Porto Belo is receiving major infrastructure investments (marina, shopping center, waterfront) and tourism already brings over 1 million visitors per season. It\'s the right time to get in.' },
+          { q: 'Is it safe to buy pre-construction property from abroad?', a: 'Yes, as long as proper precautions are taken — which I handle for you: I verify the developer\'s reputation, the project registration, all legal documentation, and personally monitor construction. You receive regular video and photo updates.' },
+          { q: 'Can I earn rental income while living abroad?', a: 'Absolutely. Many developments in the region offer vacation rental management. Average profitability is between 6% and 10% per year. I help you choose the property with the best income potential and can recommend trusted property managers.' },
+          { q: 'How does Carlos\'s service work?', a: 'My service is 100% online and personalized. We do video calls at whatever time works best for you (I serve any timezone), I send property videos, updated construction photos, and handle all documentation. You don\'t need to come to Brazil to invest.' },
+          { q: 'Do I need an active CPF and bank account in Brazil?', a: 'Yes, you need a valid CPF (Brazilian tax ID). If your tax situation needs adjustments, I can guide you through the necessary steps. As for a bank account, it\'s recommended to have one in Brazil to facilitate transactions, but there are alternatives we can evaluate together.' },
+        ],
+        es: [
+          { q: '¿Puedo comprar un inmueble en Brasil viviendo en el exterior?', a: '¡Sí! No existe ninguna restricción para brasileños que viven fuera para comprar inmuebles en Brasil. Todo el proceso puede hacerse de forma remota, con documentos digitales y poder notarial cuando sea necesario. Yo mismo vivo en Escocia y ayudo a decenas de clientes en esta situación.' },
+          { q: '¿Cómo funciona el financiamiento directo con la constructora?', a: 'A diferencia del financiamiento bancario, el financiamiento directo con la constructora es más flexible. Normalmente la entrada es del 20% al 30%, parcelada durante la obra, y el saldo puede financiarse en hasta 120 meses. No necesita comprobación de renta en Brasil y las cuotas se ajustan por el CUB/SC.' },
+          { q: '¿Por qué Itapema y Porto Belo son buenas inversiones?', a: 'Estas dos ciudades están entre las que más se valorizan en Brasil, con índices entre 15% y 20% al año. Porto Belo está recibiendo grandes inversiones en infraestructura (marina, shopping, costanera) y el turismo ya trae más de 1 millón de visitantes por temporada. Es el momento adecuado para entrar.' },
+          { q: '¿Es seguro comprar inmueble en planos desde el exterior?', a: 'Sí, siempre que con las debidas precauciones que yo tomo por ti: verifico la idoneidad de la constructora, el registro del emprendimiento, toda la documentación legal y acompaño la obra personalmente. Recibes actualizaciones por video y fotos regularmente.' },
+          { q: '¿Puedo tener renta con alquiler viviendo fuera?', a: 'Sin duda. Muchos emprendimientos en la región ofrecen gestión de alquiler por temporada. La rentabilidad promedio está entre 6% y 10% al año. Te ayudo a elegir el inmueble con mejor potencial de renta y puedo indicar administradoras de confianza.' },
+          { q: '¿Cómo funciona la atención de Carlos?', a: 'Mi atención es 100% online y personalizada. Hacemos videollamadas en el horario que sea mejor para ti (atiendo en cualquier zona horaria), envío videos de los inmuebles, fotos actualizadas de las obras y me encargo de toda la documentación. No necesitas ir a Brasil para invertir.' },
+          { q: '¿Necesito tener CPF activo y cuenta en Brasil?', a: 'Sí, es necesario tener el CPF regularizado. Si tu situación fiscal necesita ajustes, puedo orientarte sobre los pasos necesarios. En cuanto a la cuenta bancaria, es recomendable tener una cuenta en Brasil para facilitar las transacciones, pero existen alternativas que podemos evaluar juntos.' },
+        ],
+      };
+      return data[lang.value] || data.pt;
+    });
+
+    const handleScroll = () => {
+      scrolled.value = window.scrollY > 50;
+    };
+
+    onMounted(() => {
+      window.addEventListener('scroll', handleScroll);
+      AOS.init({
+        duration: 800,
+        easing: 'ease-out-cubic',
+        once: true,
+        offset: 80,
+      });
+    });
+
+    onUnmounted(() => {
+      window.removeEventListener('scroll', handleScroll);
+    });
+
+    return {
+      scrolled, mobileMenu, activeFaq, langOpen, lang, langs, langFlag, langLabel, toggleLang, setLang, t,
+      heroColumns, navItems, stats, reasons, steps, properties, testimonials, faqs,
+    };
+  }
+}).mount('#app');
+</script>
+
+</body>
+</html>

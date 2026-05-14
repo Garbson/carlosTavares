@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 280" fill="#F97316">
+  <!-- Roof top outer -->
+  <polygon points="120,8 200,58 192,66 120,22 48,66 40,58"/>
+  <!-- Roof top inner -->
+  <polygon points="120,26 188,70 180,78 120,40 60,78 52,70"/>
+
+  <!-- Left T vertical main -->
+  <rect x="52" y="82" width="16" height="120"/>
+  <!-- Left T top horizontal -->
+  <rect x="68" y="82" width="20" height="14"/>
+  <!-- Left T diagonal slash -->
+  <polygon points="68,96 88,96 88,130 68,110"/>
+
+  <!-- Right C top horizontal -->
+  <rect x="100" y="82" width="68" height="14"/>
+  <!-- Right C right vertical top -->
+  <rect x="154" y="96" width="14" height="34"/>
+  <!-- Right C right vertical bottom -->
+  <rect x="154" y="152" width="14" height="34"/>
+  <!-- Right C bottom horizontal -->
+  <rect x="100" y="186" width="68" height="14"/>
+  <!-- Right C left vertical -->
+  <rect x="100" y="96" width="14" height="90"/>
+  <!-- Right C inner top notch -->
+  <rect x="114" y="96" width="16" height="12"/>
+  <!-- Right C inner bottom notch -->
+  <rect x="114" y="174" width="16" height="12"/>
+
+  <!-- Bottom hex left -->
+  <polygon points="52,202 68,202 68,218 120,250 120,250 52,218"/>
+  <!-- Bottom hex right -->
+  <polygon points="168,200 168,218 120,250 120,250 154,200"/>
+  <!-- Bottom hex center -->
+  <polygon points="52,202 52,222 120,262 188,222 188,200 168,200 168,218 120,248 68,218 68,202"/>
+</svg>
