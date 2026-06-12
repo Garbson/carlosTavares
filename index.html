@@ -1,0 +1,2201 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Carlos Tavares | Investimentos Imobiliários no Litoral Catarinense
+    </title>
+    <meta
+      name="description"
+      content="Carlos Tavares - CRECI-SC 23.809. Especialista em imóveis na planta e investimentos imobiliários no litoral catarinense."
+    />
+    <link rel="icon" type="image/png" href="assets/logo.png" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#F97316",
+              dark: "#0F172A",
+              darker: "#020617",
+            },
+            fontFamily: {
+              sans: ["Inter", "system-ui", "sans-serif"],
+              display: ["Playfair Display", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+      }
+      body {
+        font-family: "Inter", system-ui, sans-serif;
+        overflow-x: hidden;
+      }
+
+      .gradient-text {
+        background: linear-gradient(135deg, #f97316, #fb923c);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .hero-gradient {
+        background:
+          radial-gradient(
+            ellipse at 30% 50%,
+            rgba(249, 115, 22, 0.08) 0%,
+            transparent 60%
+          ),
+          radial-gradient(
+            ellipse at 70% 20%,
+            rgba(249, 115, 22, 0.05) 0%,
+            transparent 50%
+          );
+      }
+
+      .hero-columns {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        padding: 0 8px;
+        overflow: hidden;
+        mask-image: linear-gradient(
+          to bottom,
+          transparent 0%,
+          black 10%,
+          black 85%,
+          transparent 100%
+        );
+        -webkit-mask-image: linear-gradient(
+          to bottom,
+          transparent 0%,
+          black 10%,
+          black 85%,
+          transparent 100%
+        );
+      }
+      .hero-col {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .hero-col:nth-child(3),
+      .hero-col:nth-child(4) {
+        display: none;
+      }
+      .hero-col-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+      .hero-col:nth-child(1) .hero-col-inner {
+        animation: scrollUp 40s linear infinite;
+      }
+      .hero-col:nth-child(2) .hero-col-inner {
+        animation: scrollDown 45s linear infinite;
+      }
+      .hero-col:nth-child(3) .hero-col-inner {
+        animation: scrollUp 38s linear infinite;
+      }
+      .hero-col:nth-child(4) .hero-col-inner {
+        animation: scrollDown 42s linear infinite;
+      }
+      @keyframes scrollUp {
+        0% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(-50%);
+        }
+      }
+      @keyframes scrollDown {
+        0% {
+          transform: translateY(-50%);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+      .hero-col-inner img {
+        width: 100%;
+        border-radius: 8px;
+        object-fit: cover;
+        aspect-ratio: 3/4;
+      }
+      @media (min-width: 768px) {
+        .hero-columns {
+          grid-template-columns: repeat(4, 1fr);
+          gap: 12px;
+          padding: 0 12px;
+        }
+        .hero-col {
+          gap: 12px;
+        }
+        .hero-col:nth-child(3),
+        .hero-col:nth-child(4) {
+          display: flex;
+        }
+        .hero-col-inner {
+          gap: 12px;
+        }
+        .hero-col:nth-child(1) .hero-col-inner {
+          animation-duration: 30s;
+        }
+        .hero-col:nth-child(2) .hero-col-inner {
+          animation-duration: 35s;
+        }
+        .hero-col:nth-child(3) .hero-col-inner {
+          animation-duration: 28s;
+        }
+        .hero-col:nth-child(4) .hero-col-inner {
+          animation-duration: 32s;
+        }
+        .hero-col-inner img {
+          border-radius: 12px;
+          aspect-ratio: 9/16;
+        }
+      }
+
+      .card-glow:hover {
+        box-shadow: 0 0 40px rgba(249, 115, 22, 0.15);
+      }
+
+      .marquee-track {
+        display: flex;
+        animation: marquee 25s linear infinite;
+        width: max-content;
+      }
+      @keyframes marquee {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      .nav-blur {
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+
+      .faq-content {
+        max-height: 0;
+        overflow: hidden;
+        transition:
+          max-height 0.35s ease,
+          padding 0.35s ease;
+      }
+      .faq-content.open {
+        max-height: 500px;
+      }
+
+      .lang-menu {
+        position: relative;
+      }
+      .lang-dropdown {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        margin-top: 4px;
+        background: #0f172a;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        padding: 4px;
+        min-width: 140px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+      }
+
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0f172a;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #f97316;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body class="bg-darker text-white antialiased">
+    <div id="app">
+      <!-- Navbar -->
+      <nav
+        class="fixed top-0 left-0 right-0 z-50 nav-blur bg-darker/80 border-b border-white/5 transition-all duration-300"
+        :class="{ 'shadow-lg shadow-black/20': scrolled }"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex items-center justify-between h-16 lg:h-20">
+            <a href="#" class="flex items-center gap-3">
+              <img
+                src="assets/logo.png"
+                alt="Carlos Tavares Logo"
+                class="h-10 lg:h-12 w-auto"
+              />
+              <div class="hidden sm:block">
+                <span
+                  class="text-white font-semibold text-lg leading-tight block"
+                  >Carlos Tavares</span
+                >
+                <span class="text-white/40 text-xs tracking-widest uppercase"
+                  >CRECI-SC 23.809</span
+                >
+              </div>
+            </a>
+
+            <div class="hidden md:flex items-center gap-8">
+              <a
+                v-for="item in navItems"
+                :key="item.href"
+                :href="item.href"
+                class="text-white/60 hover:text-primary text-sm font-medium transition-colors duration-200"
+              >
+                {{ item.label }}
+              </a>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <!-- Language Selector -->
+              <div class="lang-menu">
+                <button
+                  @click.stop="toggleLang"
+                  class="flex items-center gap-2 text-white border border-white/20 hover:border-primary/50 hover:text-primary px-3.5 py-2 rounded-full hover:bg-white/5 transition-all duration-200 text-sm font-medium"
+                >
+                  <span class="text-base">{{ langFlag }}</span>
+                  <span class="hidden sm:inline">{{ langLabel }}</span>
+                  <svg
+                    class="w-3.5 h-3.5 transition-transform"
+                    :class="{ 'rotate-180': langOpen }"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+                <transition
+                  enter-active-class="transition duration-150 ease-out"
+                  enter-from-class="opacity-0 scale-95"
+                  enter-to-class="opacity-100 scale-100"
+                  leave-active-class="transition duration-100 ease-in"
+                  leave-from-class="opacity-100 scale-100"
+                  leave-to-class="opacity-0 scale-95"
+                >
+                  <div v-if="langOpen" class="lang-dropdown z-50">
+                    <button
+                      v-for="l in langs"
+                      :key="l.code"
+                      @click="setLang(l.code)"
+                      class="flex items-center gap-2.5 w-full px-3 py-2 rounded-lg text-sm transition-colors"
+                      :class="lang === l.code ? 'bg-primary/10 text-primary' : 'text-white/60 hover:text-white hover:bg-white/5'"
+                    >
+                      <span>{{ l.flag }}</span>
+                      <span>{{ l.name }}</span>
+                    </button>
+                  </div>
+                </transition>
+              </div>
+
+              <a
+                href="https://wa.me/447513582537"
+                target="_blank"
+                class="hidden sm:inline-flex items-center gap-2 bg-primary hover:bg-orange-600 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 hover:scale-105"
+              >
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"
+                  />
+                  <path
+                    d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.913.913l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.387 0-4.597-.826-6.332-2.207l-.393-.312-2.646.887.887-2.646-.312-.393A9.953 9.953 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"
+                  />
+                </svg>
+                WhatsApp
+              </a>
+
+              <button
+                @click="mobileMenu = !mobileMenu"
+                class="md:hidden text-white/60 hover:text-white p-2"
+              >
+                <svg
+                  v-if="!mobileMenu"
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+                <svg
+                  v-else
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <transition
+          enter-active-class="transition duration-200 ease-out"
+          enter-from-class="opacity-0 -translate-y-2"
+          enter-to-class="opacity-100 translate-y-0"
+          leave-active-class="transition duration-150 ease-in"
+          leave-from-class="opacity-100 translate-y-0"
+          leave-to-class="opacity-0 -translate-y-2"
+        >
+          <div
+            v-if="mobileMenu"
+            class="md:hidden bg-dark/95 nav-blur border-t border-white/5 px-4 py-4 space-y-3"
+          >
+            <a
+              v-for="item in navItems"
+              :key="item.href"
+              :href="item.href"
+              @click="mobileMenu = false"
+              class="block text-white/70 hover:text-primary py-2 text-sm font-medium transition-colors"
+            >
+              {{ item.label }}
+            </a>
+            <a
+              href="https://wa.me/447513582537"
+              target="_blank"
+              class="flex items-center justify-center gap-2 bg-primary text-white px-5 py-3 rounded-full text-sm font-semibold mt-3"
+            >
+              WhatsApp
+            </a>
+          </div>
+        </transition>
+      </nav>
+
+      <!-- Hero Section -->
+      <section
+        class="relative flex items-center justify-center pt-20 pb-24"
+        style="min-height: 110vh"
+      >
+        <div class="hero-columns pointer-events-none">
+          <div class="hero-col" v-for="(col, ci) in heroColumns" :key="ci">
+            <div class="hero-col-inner">
+              <img
+                v-for="(img, ii) in col"
+                :key="ii"
+                :src="img"
+                alt="Porto Belo"
+                loading="lazy"
+              />
+              <img
+                v-for="(img, ii) in col"
+                :key="'dup-'+ii"
+                :src="img"
+                alt="Porto Belo"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="absolute inset-0 bg-darker/40 pointer-events-none"></div>
+        <div class="absolute inset-0 hero-gradient pointer-events-none"></div>
+
+        <div
+          class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative text-center"
+        >
+          <h1
+            data-aos="fade-up"
+            data-aos-delay="200"
+            class="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] mb-6"
+          >
+            {{ t.heroTitle1 }}
+            <span class="gradient-text"> {{ t.heroTitle2 }}</span>
+            {{ t.heroTitle3 }}
+          </h1>
+          <p
+            data-aos="fade-up"
+            data-aos-delay="300"
+            class="text-white text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed"
+          >
+            {{ t.heroDesc }}
+          </p>
+          <div
+            data-aos="fade-up"
+            data-aos-delay="400"
+            class="flex flex-col sm:flex-row gap-4 justify-center"
+          >
+            <a
+              href="https://wa.me/447513582537"
+              target="_blank"
+              class="inline-flex items-center justify-center gap-2 bg-primary hover:bg-orange-600 text-white px-8 py-4 rounded-full text-sm font-semibold transition-all duration-200 hover:scale-105 hover:shadow-lg hover:shadow-primary/25"
+            >
+              {{ t.ctaWhatsapp }}
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </a>
+            <a
+              href="#empreendimentos"
+              class="inline-flex items-center justify-center gap-2 border border-white/20 hover:border-primary/50 text-white px-8 py-4 rounded-full text-sm font-semibold transition-all duration-200 hover:bg-white/5"
+            >
+              {{ t.ctaProperties }}
+            </a>
+          </div>
+        </div>
+
+        <div
+          class="absolute bottom-0 left-0 right-0 border-y border-white/5 bg-dark/50 nav-blur py-4 overflow-hidden"
+        >
+          <div class="marquee-track">
+            <span
+              v-for="i in 8"
+              :key="i"
+              class="flex items-center gap-3 px-8 text-sm font-semibold text-white/50 whitespace-nowrap"
+            >
+              <span class="w-1.5 h-1.5 bg-primary rounded-full"></span>
+              {{ t.marquee1 }}
+              <span class="text-primary">·</span>
+              {{ t.marquee2 }}
+              <span class="text-primary">·</span>
+              {{ t.marquee3 }}
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats -->
+      <section class="py-16 border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-3 gap-8">
+            <div
+              v-for="(stat, i) in stats"
+              :key="i"
+              data-aos="fade-up"
+              :data-aos-delay="i * 100"
+              class="text-center"
+            >
+              <div
+                class="text-3xl sm:text-4xl lg:text-5xl font-bold gradient-text mb-2"
+              >
+                {{ stat.value }}
+              </div>
+              <div class="text-white/40 text-sm">{{ stat.label }}</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sobre -->
+      <section id="sobre" class="py-24 lg:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <span
+                data-aos="fade-up"
+                class="text-primary text-sm font-semibold tracking-widest uppercase mb-4 block"
+                >{{ t.aboutLabel }}</span
+              >
+              <h2
+                data-aos="fade-up"
+                data-aos-delay="100"
+                class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-8 leading-tight"
+              >
+                {{ t.aboutTitle1 }}
+                <span class="gradient-text">{{ t.aboutTitle2 }}</span>
+              </h2>
+              <div
+                data-aos="fade-up"
+                data-aos-delay="200"
+                class="space-y-4 text-white/50 leading-relaxed"
+              >
+                <p>{{ t.aboutP1 }}</p>
+                <p>{{ t.aboutP2 }}</p>
+                <p v-if="t.aboutP3">{{ t.aboutP3 }}</p>
+              </div>
+              <div
+                data-aos="fade-up"
+                data-aos-delay="300"
+                class="grid grid-cols-2 gap-3 mt-8"
+              >
+                <div
+                  class="flex items-center gap-2.5 bg-white/5 border border-white/5 rounded-xl px-4 py-3 text-sm"
+                >
+                  <span class="text-lg">🏗️</span>
+                  <span class="text-white/70">Lançamentos exclusivos</span>
+                </div>
+                <div
+                  class="flex items-center gap-2.5 bg-white/5 border border-white/5 rounded-xl px-4 py-3 text-sm"
+                >
+                  <span class="text-lg">📈</span>
+                  <span class="text-white/70">Valorização patrimonial</span>
+                </div>
+                <div
+                  class="flex items-center gap-2.5 bg-white/5 border border-white/5 rounded-xl px-4 py-3 text-sm"
+                >
+                  <span class="text-lg">🌊</span>
+                  <span class="text-white/70">Litoral Norte de SC</span>
+                </div>
+                <div
+                  class="flex items-center gap-2.5 bg-white/5 border border-white/5 rounded-xl px-4 py-3 text-sm"
+                >
+                  <span class="text-lg">🤝</span>
+                  <span class="text-white/70">Atendimento personalizado</span>
+                </div>
+              </div>
+              <div data-aos="fade-up" data-aos-delay="400" class="mt-6">
+                <a
+                  href="https://wa.me/447513582537"
+                  target="_blank"
+                  class="inline-flex items-center gap-2 bg-primary hover:bg-orange-600 text-white px-6 py-3 rounded-full font-semibold text-sm transition-all duration-200 hover:scale-105 hover:shadow-lg hover:shadow-primary/25"
+                >
+                  {{ t.aboutCta }}
+                  <svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <div
+              data-aos="fade-left"
+              data-aos-delay="200"
+              class="relative flex justify-center lg:justify-end"
+            >
+              <div class="relative">
+                <div
+                  class="absolute -inset-4 bg-gradient-to-br from-primary/20 to-primary/5 rounded-3xl blur-2xl"
+                ></div>
+                <img
+                  src="assets/foto-carlos-nova.jpeg"
+                  alt="Carlos Tavares"
+                  class="relative w-80 lg:w-[420px] rounded-3xl shadow-2xl shadow-black/50 object-cover aspect-[3/4]"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Por que investir -->
+      <section id="porque" class="py-24 lg:py-32 bg-dark/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <span
+              data-aos="fade-up"
+              class="text-primary text-sm font-semibold tracking-widest uppercase mb-4 block"
+              >{{ t.whyLabel }}</span
+            >
+            <h2
+              data-aos="fade-up"
+              data-aos-delay="100"
+              class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-6"
+            >
+              {{ t.whyTitle1 }}
+              <span class="gradient-text">{{ t.whyTitle2 }}</span>
+            </h2>
+            <p data-aos="fade-up" data-aos-delay="200" class="text-white/50">
+              {{ t.whyDesc }}
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-6">
+            <div
+              v-for="(reason, i) in reasons"
+              :key="i"
+              data-aos="fade-up"
+              :data-aos-delay="i * 150"
+              class="group bg-darker/80 border border-white/5 rounded-2xl p-8 hover:border-primary/30 transition-all duration-500 card-glow relative overflow-hidden"
+            >
+              <div
+                class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2 group-hover:bg-primary/10 transition-all duration-500"
+              ></div>
+              <div class="relative">
+                <div
+                  class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors duration-300"
+                >
+                  <span v-html="reason.icon" class="text-primary"></span>
+                </div>
+                <h3 class="text-white font-semibold text-xl mb-3">
+                  {{ reason.title }}
+                </h3>
+                <p class="text-white/40 leading-relaxed text-sm">
+                  {{ reason.desc }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Como Funciona -->
+      <section id="servicos" class="py-24 lg:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <span
+              data-aos="fade-up"
+              class="text-primary text-sm font-semibold tracking-widest uppercase mb-4 block"
+              >{{ t.howLabel }}</span
+            >
+            <h2
+              data-aos="fade-up"
+              data-aos-delay="100"
+              class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-6"
+            >
+              {{ t.howTitle1 }}
+              <span class="gradient-text">{{ t.howTitle2 }}</span>
+            </h2>
+            <p data-aos="fade-up" data-aos-delay="200" class="text-white/50">
+              {{ t.howDesc }}
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div
+              v-for="(step, i) in steps"
+              :key="i"
+              data-aos="fade-up"
+              :data-aos-delay="i * 120"
+              class="relative bg-dark/80 border border-white/5 rounded-2xl p-6 hover:border-primary/30 transition-all duration-300 card-glow"
+            >
+              <div
+                class="text-6xl font-bold text-primary/10 absolute top-4 right-4"
+              >
+                {{ String(i + 1).padStart(2, '0') }}
+              </div>
+              <div class="relative">
+                <div
+                  class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4"
+                >
+                  <span v-html="step.icon" class="text-primary"></span>
+                </div>
+                <h3 class="text-white font-semibold mb-2">{{ step.title }}</h3>
+                <p class="text-white/40 text-sm leading-relaxed">
+                  {{ step.desc }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Empreendimentos -->
+      <section id="empreendimentos" class="py-24 lg:py-32 bg-dark/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <span
+              data-aos="fade-up"
+              class="text-primary text-sm font-semibold tracking-widest uppercase mb-4 block"
+              >{{ t.propLabel }}</span
+            >
+            <h2
+              data-aos="fade-up"
+              data-aos-delay="100"
+              class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-6"
+            >
+              {{ t.propTitle1 }}
+              <span class="gradient-text">{{ t.propTitle2 }}</span> {{
+              t.propTitle3 }}
+            </h2>
+            <p data-aos="fade-up" data-aos-delay="200" class="text-white/50">
+              {{ t.propDesc }}
+            </p>
+          </div>
+
+          <!-- Carousel Stage -->
+          <div
+            class="props-stage relative w-full mb-8"
+            style="height: 400px; perspective: 1400px"
+            @touchstart="onTouchStart"
+            @touchend="onTouchEnd"
+          >
+            <!-- Swipe hint mobile -->
+            <div
+              class="sm:hidden absolute top-0 left-1/2 -translate-x-1/2 -translate-y-7 flex items-center gap-1.5 text-[10px] tracking-widest uppercase text-white/30 pointer-events-none select-none"
+            >
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                class="-scale-x-100"
+              >
+                <path d="M19 12H5M12 5l-7 7 7 7" />
+              </svg>
+              <span
+                >{{ lang === 'en' ? 'swipe' : lang === 'es' ? 'desliza' :
+                'deslize' }}</span
+              >
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </div>
+
+            <div
+              v-for="(album, i) in albums"
+              :key="album.id"
+              @click="goToAlbum(i)"
+              class="absolute top-1/2 left-1/2 w-[88%] sm:w-[74%] md:w-[60%] h-[84%] cursor-pointer"
+              :style="cardStyle(i)"
+              style="transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1)"
+            >
+              <div
+                class="w-full h-full relative rounded-2xl overflow-hidden border border-white/20 shadow-2xl"
+              >
+                <img
+                  :src="album.images[albumImgIdx[album.id]]"
+                  :alt="album.title"
+                  class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/40"
+                ></div>
+                <span
+                  class="absolute left-4 bottom-4 text-sm sm:text-base font-medium text-white/95 tracking-wide"
+                  >{{ album.title }}</span
+                >
+                <!-- Image nav arrows (active only) -->
+                <template v-if="i === activeAlbum">
+                  <button
+                    @click.stop="moveImg(album.id, -1)"
+                    class="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/50 nav-blur text-white border border-white/20 text-lg flex items-center justify-center hover:bg-black/70 transition-colors"
+                  >
+                    &#8249;
+                  </button>
+                  <button
+                    @click.stop="moveImg(album.id, 1)"
+                    class="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/50 nav-blur text-white border border-white/20 text-lg flex items-center justify-center hover:bg-black/70 transition-colors"
+                  >
+                    &#8250;
+                  </button>
+                  <div
+                    class="absolute bottom-3 right-3 flex items-center gap-1.5"
+                  >
+                    <button
+                      v-for="(img, imgIdx) in album.images"
+                      :key="imgIdx"
+                      @click.stop="setImg(album.id, imgIdx)"
+                      class="h-1.5 rounded-full transition-all"
+                      :class="imgIdx === albumImgIdx[album.id] ? 'w-6 bg-white' : 'w-2.5 bg-white/40'"
+                    ></button>
+                  </div>
+                </template>
+              </div>
+            </div>
+          </div>
+
+          <!-- Album dots -->
+          <div class="flex items-center justify-center gap-2 mb-9">
+            <button
+              v-for="(album, i) in albums"
+              :key="album.id"
+              @click="goToAlbum(i)"
+              class="h-1.5 rounded-full transition-all"
+              :class="i === activeAlbum ? 'w-8 bg-primary' : 'w-3 bg-white/15 hover:bg-white/30'"
+            ></button>
+          </div>
+
+          <!-- Detail card -->
+          <div
+            class="max-w-[920px] mx-auto bg-dark/80 nav-blur border border-white/10 rounded-2xl p-6 sm:p-8 mb-10"
+          >
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+              <span
+                class="text-[10px] font-semibold tracking-widest uppercase px-3 py-1.5 rounded-full bg-primary text-white"
+                >{{ currentAlbum.tag }}</span
+              >
+              <span class="text-sm font-medium gradient-text"
+                >{{ currentAlbum.price }}</span
+              >
+            </div>
+            <h3
+              class="font-display text-2xl sm:text-3xl font-bold text-white mb-2"
+            >
+              {{ currentAlbum.title }}
+            </h3>
+            <div
+              class="flex items-center gap-1.5 text-xs tracking-wider uppercase text-white/40 mb-3"
+            >
+              <svg
+                class="w-3.5 h-3.5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+              </svg>
+              {{ currentAlbum.location }}
+            </div>
+            <p class="text-white/50 text-sm leading-relaxed mb-6">
+              {{ currentAlbum.desc }}
+            </p>
+            <a
+              href="https://wa.me/447513582537"
+              target="_blank"
+              class="inline-flex items-center gap-2.5 bg-green-600 hover:bg-green-700 text-white text-sm font-semibold px-7 py-3.5 rounded-xl transition-all hover:scale-105 hover:shadow-lg hover:shadow-green-500/25"
+            >
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"
+                />
+                <path
+                  d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.913.913l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.387 0-4.597-.826-6.332-2.207l-.393-.312-2.646.887.887-2.646-.312-.393A9.953 9.953 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"
+                />
+              </svg>
+              {{ t.ctaWhatsapp }}
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Depoimento / Identificação -->
+      <section class="py-24 lg:py-32 relative overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none">
+          <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-primary/5 rounded-full blur-3xl"
+          ></div>
+        </div>
+        <div
+          class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative"
+        >
+          <div data-aos="zoom-in">
+            <svg
+              class="w-12 h-12 text-primary/30 mx-auto mb-8"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"
+              />
+            </svg>
+          </div>
+          <h2
+            data-aos="fade-up"
+            data-aos-delay="100"
+            class="font-display text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 leading-relaxed"
+          >
+            {{ t.quoteText1 }}
+            <span class="gradient-text">{{ t.quoteText2 }}</span>
+          </h2>
+          <p
+            data-aos="fade-up"
+            data-aos-delay="200"
+            class="text-white/40 text-lg mb-8 max-w-2xl mx-auto"
+          >
+            {{ t.quoteDesc }}
+          </p>
+          <div
+            data-aos="fade-up"
+            data-aos-delay="300"
+            class="flex items-center justify-center gap-4"
+          >
+            <img
+              src="assets/foto-carlos-nova.jpeg"
+              alt="Carlos Tavares"
+              class="w-14 h-14 rounded-full object-cover"
+            />
+            <div class="text-left">
+              <span class="text-white font-semibold text-sm block"
+                >Carlos Tavares</span
+              >
+              <span class="text-white/40 text-xs">{{ t.quoteRole }}</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testemunhos -->
+      <section id="testemunhos" class="py-24 lg:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <span
+              data-aos="fade-up"
+              class="text-primary text-sm font-semibold tracking-widest uppercase mb-4 block"
+              >{{ t.testLabel }}</span
+            >
+            <h2
+              data-aos="fade-up"
+              data-aos-delay="100"
+              class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-6"
+            >
+              {{ t.testTitle1 }}
+              <span class="gradient-text">{{ t.testTitle2 }}</span>
+            </h2>
+            <p data-aos="fade-up" data-aos-delay="200" class="text-white/50">
+              {{ t.testDesc }}
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div
+              v-for="(tt, i) in testimonials"
+              :key="i"
+              data-aos="fade-up"
+              :data-aos-delay="i * 150"
+              class="bg-dark/80 border border-white/5 rounded-2xl p-6 hover:border-primary/20 transition-all duration-300 card-glow flex flex-col"
+            >
+              <div class="flex items-center gap-1 mb-4">
+                <svg
+                  v-for="s in 5"
+                  :key="s"
+                  class="w-4 h-4 text-primary"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  />
+                </svg>
+              </div>
+              <p class="text-white/50 text-sm leading-relaxed mb-6 flex-1">
+                {{ tt.text }}
+              </p>
+              <div class="flex items-center gap-3 pt-4 border-t border-white/5">
+                <div
+                  class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center"
+                >
+                  <span class="text-primary font-semibold text-sm"
+                    >{{ tt.initials }}</span
+                  >
+                </div>
+                <div>
+                  <span class="text-white font-medium text-sm block"
+                    >{{ tt.name }}</span
+                  >
+                  <span class="text-white/30 text-xs">{{ tt.location }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="duvidas" class="py-24 lg:py-32 bg-dark/50">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <span
+              data-aos="fade-up"
+              class="text-primary text-sm font-semibold tracking-widest uppercase mb-4 block"
+              >{{ t.faqLabel }}</span
+            >
+            <h2
+              data-aos="fade-up"
+              data-aos-delay="100"
+              class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-6"
+            >
+              {{ t.faqTitle1 }}
+              <span class="gradient-text">{{ t.faqTitle2 }}</span>
+            </h2>
+          </div>
+
+          <div class="space-y-3">
+            <div
+              v-for="(faq, i) in faqs"
+              :key="i"
+              class="border border-white/5 rounded-xl overflow-hidden hover:border-white/10 transition-colors duration-300"
+              :class="{ 'border-primary/20': activeFaq === i }"
+            >
+              <button
+                @click="activeFaq = activeFaq === i ? null : i"
+                class="w-full flex items-center justify-between p-5 text-left"
+              >
+                <span class="text-white font-medium text-sm pr-4"
+                  >{{ faq.q }}</span
+                >
+                <svg
+                  class="w-5 h-5 text-primary flex-shrink-0 transition-transform duration-300"
+                  :class="{ 'rotate-180': activeFaq === i }"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              <div class="faq-content" :class="{ 'open': activeFaq === i }">
+                <div class="px-5 pb-5 text-white/40 text-sm leading-relaxed">
+                  {{ faq.a }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contato -->
+      <section id="contato" class="py-24 lg:py-32 relative overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none">
+          <div
+            class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl"
+          ></div>
+        </div>
+
+        <div
+          class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center"
+        >
+          <span
+            data-aos="fade-up"
+            class="text-primary text-sm font-semibold tracking-widest uppercase mb-4 block"
+            >{{ t.contactLabel }}</span
+          >
+          <h2
+            data-aos="fade-up"
+            data-aos-delay="100"
+            class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-tight"
+          >
+            {{ t.contactTitle1 }}
+            <span class="gradient-text">{{ t.contactTitle2 }}</span>
+          </h2>
+          <p
+            data-aos="fade-up"
+            data-aos-delay="200"
+            class="text-white/50 mb-12 leading-relaxed max-w-2xl mx-auto"
+          >
+            {{ t.contactDesc }}
+          </p>
+
+          <div
+            data-aos="fade-up"
+            data-aos-delay="300"
+            class="flex flex-col sm:flex-row gap-4 justify-center mb-12"
+          >
+            <a
+              href="https://wa.me/447513582537"
+              target="_blank"
+              class="inline-flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-full text-sm font-semibold transition-all duration-200 hover:scale-105 hover:shadow-lg hover:shadow-green-500/25"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"
+                />
+                <path
+                  d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.913.913l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.387 0-4.597-.826-6.332-2.207l-.393-.312-2.646.887.887-2.646-.312-.393A9.953 9.953 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"
+                />
+              </svg>
+              WhatsApp
+            </a>
+            <a
+              href="https://instagram.com/onovocarlos"
+              target="_blank"
+              class="inline-flex items-center justify-center gap-3 border border-white/20 hover:border-pink-500/50 text-white px-8 py-4 rounded-full text-sm font-semibold transition-all duration-200 hover:bg-white/5"
+            >
+              <svg
+                class="w-5 h-5 text-pink-500"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"
+                />
+              </svg>
+              @onovocarlos
+            </a>
+          </div>
+
+          <div
+            data-aos="fade-up"
+            data-aos-delay="400"
+            class="inline-flex items-center gap-3 bg-primary/5 border border-primary/10 rounded-full px-6 py-3"
+          >
+            <svg
+              class="w-5 h-5 text-primary flex-shrink-0"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+            <p class="text-white/50 text-sm">{{ t.contactTimezone }}</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="border-t border-white/5 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div
+            class="flex flex-col md:flex-row items-center justify-between gap-6"
+          >
+            <div class="flex items-center gap-3">
+              <img
+                src="assets/logo.png"
+                alt="Carlos Tavares Logo"
+                class="h-8 w-auto"
+              />
+              <div>
+                <span class="text-white/40 text-sm block"
+                  >Carlos Tavares · CRECI-SC 23.809</span
+                >
+                <span class="text-white/30 text-xs"
+                  >Itapema · Porto Belo · SC</span
+                >
+              </div>
+            </div>
+            <div class="text-white/30 text-xs text-center md:text-right">
+              <p>&copy; 2026 Carlos Tavares. {{ t.footerRights }}</p>
+              <p class="mt-1">
+                {{ t.footerDev }}
+                <a
+                  href="#"
+                  class="text-primary/60 hover:text-primary transition-colors"
+                  >Garbson Souza</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <!-- WhatsApp Float -->
+      <a
+        href="https://wa.me/447513582537"
+        target="_blank"
+        class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg shadow-green-500/30 transition-all duration-200 hover:scale-110"
+      >
+        <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
+          <path
+            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"
+          />
+          <path
+            d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.913.913l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.387 0-4.597-.826-6.332-2.207l-.393-.312-2.646.887.887-2.646-.312-.393A9.953 9.953 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"
+          />
+        </svg>
+      </a>
+    </div>
+
+    <!-- Vue 3 -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+      const {
+        createApp,
+        ref,
+        reactive,
+        computed,
+        onMounted,
+        onUnmounted,
+        watch,
+      } = Vue;
+
+      createApp({
+        setup() {
+          const scrolled = ref(false);
+          const mobileMenu = ref(false);
+          const activeFaq = ref(null);
+          const langOpen = ref(false);
+          const lang = ref(localStorage.getItem("site-lang") || "pt");
+
+          const langs = [
+            { code: "pt", flag: "🇧🇷", name: "Português" },
+            { code: "es", flag: "🇪🇸", name: "Español" },
+            { code: "en", flag: "🇬🇧", name: "English" },
+          ];
+
+          const langFlag = computed(
+            () => langs.find((l) => l.code === lang.value)?.flag || "🇧🇷",
+          );
+          const langLabel = computed(() => {
+            const labels = { pt: "PT", en: "EN", es: "ES" };
+            return labels[lang.value] || "PT";
+          });
+
+          const toggleLang = () => {
+            langOpen.value = !langOpen.value;
+          };
+
+          const setLang = (code) => {
+            lang.value = code;
+            langOpen.value = false;
+            localStorage.setItem("site-lang", code);
+          };
+
+          document.addEventListener("click", (e) => {
+            if (!e.target.closest(".lang-menu")) langOpen.value = false;
+          });
+
+          const heroColumns = [
+            [
+              "assets/1312e12d437fa9bf386f309a3ef35845.jpg",
+              "assets/3b9c54fc408c6fd10a2a90be817e3ddc.jpg",
+              "assets/70eaedd380455355df1d0026e7c86d2f.jpg",
+            ],
+            [
+              "assets/1bac0b5fe647f236ea0da6bf6fe8d81a.jpg",
+              "assets/41f340be9c93634e56857bc27b863066.jpg",
+              "assets/d372dcd01683484a171dfa1ab69d18df.jpg",
+            ],
+            [
+              "assets/2a86a575e8d1ebb204c5be6aebb04e55.jpg",
+              "assets/59e4615195b26025d063767d81bdd06d.jpg",
+              "assets/3dff6fce6e92690356e6a332647c0fc0.jpg",
+            ],
+            [
+              "assets/e0f00a8ad6dd0e207fbf76d01837881e.jpg",
+              "assets/57f94c41d3c9305f5077c8499d038582.jpg",
+              "assets/e05329fed862d95bbad9b89b6d4dbacd.jpg",
+            ],
+          ];
+
+          // Carousel
+          const albums = [
+            {
+              id: "balasTower",
+              title: "BALAS TOWER",
+              images: [
+                "assets/balasTower/10.jpg",
+                "assets/balasTower/50.jpg",
+                "assets/balasTower/90.jpg",
+                "assets/balasTower/120.jpg",
+                "assets/balasTower/180.jpg",
+                "assets/balasTower/250.jpg",
+                "assets/balasTower/330.jpg",
+              ],
+            },
+            {
+              id: "balasHorizon",
+              title: "BALAS HORIZON",
+              images: [
+                "assets/balasHorizon/Predio led 1.jpg",
+                "assets/balasHorizon/Predio led 2.jpg",
+                "assets/balasHorizon/3K.jpg",
+                "assets/balasHorizon/Amanhecer.jpg",
+                "assets/balasHorizon/apto 1.jpg",
+                "assets/balasHorizon/piscina 2.jpg",
+                "assets/balasHorizon/Zoom out sofa.jpg",
+                "assets/balasHorizon/hall de entrada.jpg",
+              ],
+            },
+            {
+              id: "elevare",
+              title: "ELEVARE",
+              images: [
+                "assets/elevare/fachada.jpg",
+                "assets/elevare/drone-62.jpg",
+                "assets/elevare/pazcon-noturna.jpg",
+                "assets/elevare/PAZCON_PISCINA_002.jpg",
+                "assets/elevare/PAZCON_ACADEMIA_001.jpg",
+                "assets/elevare/PAZCON_BRINQUEDOTECA_001.jpg",
+                "assets/elevare/PAZCON_PIZZA WINE BAR_01.jpg",
+                "assets/elevare/PAZCON_SMART MARKET_001.jpg",
+                "assets/elevare/PAZCON_SALAO DE FESTAS_01.jpg",
+                "assets/elevare/PAZCON_SALA DE JOGOS_001.jpg",
+                "assets/elevare/PAZCON_LAVANDERIA_001.jpg",
+              ],
+            },
+            {
+              id: "portobello",
+              title: "PORTO BELLO",
+              images: [
+                "assets/portobello/1312e12d437fa9bf386f309a3ef35845.jpg",
+                "assets/portobello/b051dbf86381edc88630533e89174ab0.jpg",
+                "assets/portobello/d372dcd01683484a171dfa1ab69d18df.jpg",
+                "assets/portobello/dfff7c34828f2638749e879e70a8b611.jpg",
+                "assets/portobello/e66aadcf1ad96f0e82df48fb6a9f90c2.jpg",
+              ],
+            },
+            {
+              id: "itapema",
+              title: "ITAPEMA",
+              images: [
+                "assets/itapema/47bb616e813ac81871a2ef78c48f71bc.jpg",
+                "assets/itapema/2a86a575e8d1ebb204c5be6aebb04e55.jpg",
+                "assets/itapema/2d21397bfb7b069e41b70db7857ccb8d.jpg",
+                "assets/itapema/70eaedd380455355df1d0026e7c86d2f.jpg",
+                "assets/itapema/8619527117adae36a2552156feb6bf46.jpg",
+                "assets/itapema/bd81e307726c280745f520802d0a66d5.jpg",
+              ],
+            },
+          ];
+          const activeAlbum = ref(0);
+          const albumImgIdx = reactive({
+            balasTower: 0,
+            balasHorizon: 0,
+            elevare: 0,
+            portobello: 0,
+            itapema: 0,
+          });
+          const isMobile = ref(false);
+          const touchStartX = ref(null);
+          const touchStartY = ref(null);
+          let carouselTimer = null;
+
+          const goToAlbum = (i) => {
+            activeAlbum.value =
+              ((i % albums.length) + albums.length) % albums.length;
+          };
+          const moveImg = (albumId, dir) => {
+            const len = albums.find((a) => a.id === albumId).images.length;
+            albumImgIdx[albumId] =
+              (((albumImgIdx[albumId] + dir) % len) + len) % len;
+          };
+          const setImg = (albumId, idx) => {
+            albumImgIdx[albumId] = idx;
+          };
+
+          const onTouchStart = (e) => {
+            touchStartX.value = e.touches[0].clientX;
+            touchStartY.value = e.touches[0].clientY;
+          };
+          const onTouchEnd = (e) => {
+            if (touchStartX.value === null) return;
+            const dx = touchStartX.value - e.changedTouches[0].clientX;
+            const dy = touchStartY.value - e.changedTouches[0].clientY;
+            if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 45)
+              goToAlbum(activeAlbum.value + (dx > 0 ? 1 : -1));
+            touchStartX.value = null;
+          };
+
+          const cardStyle = (i) => {
+            const queuePos =
+              (((i - activeAlbum.value) % albums.length) + albums.length) %
+              albums.length;
+            const opacities = [1, 0.82, 0.62, 0.45];
+            let transform;
+            if (isMobile.value) {
+              if (queuePos === 0)
+                transform = "translate(-50%,-50%) scale(1) rotate(0deg)";
+              else {
+                const d = 7 + (queuePos - 1) * 6,
+                  s = 1 - queuePos * 0.09,
+                  r = queuePos % 2 === 1 ? 2.5 : -2.5;
+                transform = `translate(-50%,-50%) translateY(${d}%) scale(${s}) rotate(${r}deg)`;
+              }
+            } else {
+              if (queuePos === 0)
+                transform = "translate(-50%,-50%) scale(1) rotateY(0deg)";
+              else {
+                const sh = 28 + (queuePos - 1) * 12,
+                  s = 1 - queuePos * 0.13;
+                transform = `translate(-50%,-50%) translateX(-${sh}%) scale(${s}) rotateY(18deg)`;
+              }
+            }
+            return {
+              transform,
+              opacity: opacities[queuePos] ?? 0,
+              zIndex: 20 - queuePos,
+              filter: `saturate(${1 - queuePos * 0.16}) brightness(${1 - queuePos * 0.08})`,
+            };
+          };
+
+          const startCarouselTimer = () => {
+            clearTimeout(carouselTimer);
+            carouselTimer = setTimeout(() => {
+              const album = albums[activeAlbum.value];
+              const cur = albumImgIdx[album.id];
+              if (cur >= album.images.length - 1) {
+                albumImgIdx[album.id] = 0;
+                goToAlbum(activeAlbum.value + 1);
+              } else {
+                albumImgIdx[album.id] = cur + 1;
+              }
+            }, 1500);
+          };
+
+          watch(
+            [activeAlbum, () => JSON.stringify(albumImgIdx)],
+            () => {
+              startCarouselTimer();
+            },
+            { immediate: true },
+          );
+
+          const translations = {
+            pt: {
+              heroTitle1: "Invista no litoral que mais",
+              heroTitle2: "valoriza",
+              heroTitle3: "do Brasil",
+              heroDesc:
+                "Acesso a lançamentos exclusivos em Porto Belo e Itapema. Análise criteriosa de mercado e atendimento personalizado do início ao pós-compra.",
+              ctaWhatsapp: "Fale Comigo no WhatsApp",
+              ctaProperties: "Ver Oportunidades",
+              marquee1: "Lançamentos exclusivos",
+              marquee2: "Valorização patrimonial",
+              marquee3: "Litoral Norte de SC",
+              aboutLabel: "Quem sou eu",
+              aboutTitle1: "Especialista em imóveis na planta e ",
+              aboutTitle2: "investimentos no litoral catarinense",
+              aboutP1:
+                "Meu nome é Carlos Tavares. Com credenciamento CRECI-SC 23.809, sou especialista em imóveis na planta e investimentos imobiliários em Porto Belo, Itapema e região.",
+              aboutP2:
+                "Com análise criteriosa de mercado e atendimento próximo, ajudo investidores e famílias a encontrar oportunidades com potencial de valorização, segurança e retorno. Da escolha do imóvel ao pós-compra, com transparência e dedicação.",
+              aboutP3: "",
+              aboutCta: "Fale comigo agora!",
+              whyLabel: "Por que investir",
+              whyTitle1: "O litoral catarinense é o lugar certo para o seu",
+              whyTitle2: "patrimônio crescer",
+              whyDesc:
+                "Itapema e Porto Belo estão entre as regiões que mais valorizam no Brasil. Com crescimento acelerado e grandes investimentos em infraestrutura, o potencial de retorno é real.",
+              howLabel: "Como funciona",
+              howTitle1: "Investir em imóveis nunca foi tão",
+              howTitle2: "simples",
+              howDesc:
+                "Processo completo com análise criteriosa, atendimento personalizado e acompanhamento em cada etapa",
+              propLabel: "Oportunidades",
+              propTitle1: "Imóveis",
+              propTitle2: "selecionados",
+              propTitle3: "para quem está longe",
+              propDesc:
+                "Cada imóvel é criteriosamente selecionado com foco em valorização, segurança e potencial de retorno em Porto Belo e Itapema",
+              propFrom: "A partir de",
+              quoteText1:
+                "Investir em imóveis no litoral catarinense é uma decisão que transforma seu futuro. ",
+              quoteText2:
+                "E eu estou aqui para te guiar com segurança em cada passo.",
+              quoteDesc:
+                "Com análise criteriosa de mercado e atendimento personalizado, garanto que você tenha acesso às melhores oportunidades em Porto Belo, Itapema e região.",
+              quoteRole: "Corretor de Imóveis",
+              testLabel: "Depoimentos",
+              testTitle1: "Quem já investiu",
+              testTitle2: "recomenda",
+              testDesc:
+                "Clientes no exterior que confiaram no Carlos para investir no Brasil",
+              faqLabel: "Dúvidas",
+              faqTitle1: "Perguntas frequentes sobre",
+              faqTitle2: "investir",
+              contactLabel: "Contato",
+              contactTitle1: "Vamos conversar sobre o seu próximo ",
+              contactTitle2: "investimento",
+              contactDesc:
+                "Seja para investir ou realizar o sonho da casa na praia, estou pronto para te atender com análise criteriosa, transparência e dedicação em cada etapa.",
+              contactTimezone: "Atendimento em Porto Belo, Itapema e região",
+              footerRights: "Todos os direitos reservados.",
+              footerDev: "Desenvolvido por",
+            },
+            en: {
+              heroTitle1: "Invest in the fastest-",
+              heroTitle2: "appreciating",
+              heroTitle3: "coastline in Brazil",
+              heroDesc:
+                "Access exclusive launches in Porto Belo and Itapema. Thorough market analysis and personalized service from start to post-purchase.",
+              ctaWhatsapp: "Talk to Me on WhatsApp",
+              ctaProperties: "View Opportunities",
+              marquee1: "Exclusive launches",
+              marquee2: "Property appreciation",
+              marquee3: "North Coast of SC",
+              aboutLabel: "About me",
+              aboutTitle1: "A real estate specialist focused on ",
+              aboutTitle2: "investments on the Santa Catarina coast",
+              aboutP1:
+                "My name is Carlos Tavares. With CRECI-SC 23.809 accreditation, I specialize in pre-construction properties and real estate investments in Porto Belo, Itapema, and the surrounding region.",
+              aboutP2:
+                "With thorough market analysis and close, personalized service, I help investors and families find opportunities with potential for appreciation, security, and returns. From choosing the ideal property to post-purchase support, with transparency and dedication.",
+              aboutP3: "",
+              aboutCta: "Talk to me now!",
+              whyLabel: "Why invest",
+              whyTitle1:
+                "The coast of Santa Catarina is the right place for your",
+              whyTitle2: "wealth to grow",
+              whyDesc:
+                "Itapema and Porto Belo are among the fastest-appreciating regions in Brazil. With accelerated growth and major infrastructure investments, the return potential is real.",
+              howLabel: "How it works",
+              howTitle1: "Investing in real estate has never been so",
+              howTitle2: "simple",
+              howDesc:
+                "Complete process with thorough analysis, personalized service, and guidance at every step",
+              propLabel: "Opportunities",
+              propTitle1: "Properties",
+              propTitle2: "selected",
+              propTitle3: "for those living abroad",
+              propDesc:
+                "Each property is carefully selected with a focus on appreciation, security, and return potential in Porto Belo and Itapema",
+              propFrom: "Starting at",
+              quoteText1:
+                "Investing in real estate on the coast of Santa Catarina is a decision that transforms your future. ",
+              quoteText2:
+                "And I'm here to guide you safely every step of the way.",
+              quoteDesc:
+                "With thorough market analysis and personalized service, I ensure you have access to the best opportunities in Porto Belo, Itapema, and the surrounding region.",
+              quoteRole: "Real Estate Agent",
+              testLabel: "Testimonials",
+              testTitle1: "Those who invested",
+              testTitle2: "recommend",
+              testDesc: "Clients abroad who trusted Carlos to invest in Brazil",
+              faqLabel: "FAQ",
+              faqTitle1: "Frequently asked questions about",
+              faqTitle2: "investing",
+              contactLabel: "Contact",
+              contactTitle1: "Let's talk about your next ",
+              contactTitle2: "investment",
+              contactDesc:
+                "Whether you're looking to invest or fulfill the dream of a beach home, I'm ready to assist you with thorough analysis, transparency, and dedication at every stage.",
+              contactTimezone: "Serving Porto Belo, Itapema, and region",
+              footerRights: "All rights reserved.",
+              footerDev: "Developed by",
+            },
+            es: {
+              heroTitle1: "Invierte en el litoral que más",
+              heroTitle2: "se valoriza",
+              heroTitle3: "de Brasil",
+              heroDesc:
+                "Acceso a lanzamientos exclusivos en Porto Belo e Itapema. Análisis criterioso del mercado y atención personalizada del inicio al post-compra.",
+              ctaWhatsapp: "Habla Conmigo por WhatsApp",
+              ctaProperties: "Ver Oportunidades",
+              marquee1: "Lanzamientos exclusivos",
+              marquee2: "Valorización patrimonial",
+              marquee3: "Litoral Norte de SC",
+              aboutLabel: "Quién soy",
+              aboutTitle1: "Un especialista en inmuebles en planos e ",
+              aboutTitle2: "inversiones en el litoral catarinense",
+              aboutP1:
+                "Mi nombre es Carlos Tavares. Con acreditación CRECI-SC 23.809, soy especialista en inmuebles en planos e inversiones inmobiliarias en Porto Belo, Itapema y región.",
+              aboutP2:
+                "Con análisis criterioso del mercado y atención cercana, ayudo a inversores y familias a encontrar oportunidades con potencial de valorización, seguridad y retorno. Desde la elección del inmueble ideal hasta el post-compra, con transparencia y dedicación.",
+              aboutP3: "",
+              aboutCta: "¡Háblame ahora!",
+              whyLabel: "Por qué invertir",
+              whyTitle1: "El litoral catarinense es el lugar ideal para que tu",
+              whyTitle2: "patrimonio crezca",
+              whyDesc:
+                "Itapema y Porto Belo están entre las regiones que más se valorizan en Brasil. Con crecimiento acelerado y grandes inversiones en infraestructura, el potencial de retorno es real.",
+              howLabel: "Cómo funciona",
+              howTitle1: "Invertir en inmuebles nunca fue tan",
+              howTitle2: "simple",
+              howDesc:
+                "Proceso completo con análisis criterioso, atención personalizada y acompañamiento en cada etapa",
+              propLabel: "Oportunidades",
+              propTitle1: "Inmuebles",
+              propTitle2: "seleccionados",
+              propTitle3: "para quienes están lejos",
+              propDesc:
+                "Cada inmueble es cuidadosamente seleccionado con foco en valorización, seguridad y potencial de retorno en Porto Belo e Itapema",
+              propFrom: "Desde",
+              quoteText1:
+                "Invertir en inmuebles en el litoral catarinense es una decisión que transforma tu futuro. ",
+              quoteText2:
+                "Y estoy aquí para guiarte con seguridad en cada paso.",
+              quoteDesc:
+                "Con análisis criterioso del mercado y atención personalizada, garantizo que tengas acceso a las mejores oportunidades en Porto Belo, Itapema y región.",
+              quoteRole: "Corredor de Inmuebles",
+              testLabel: "Testimonios",
+              testTitle1: "Quienes ya invirtieron",
+              testTitle2: "recomiendan",
+              testDesc:
+                "Clientes en el exterior que confiaron en Carlos para invertir en Brasil",
+              faqLabel: "Preguntas",
+              faqTitle1: "Preguntas frecuentes sobre",
+              faqTitle2: "invertir",
+              contactLabel: "Contacto",
+              contactTitle1: "Conversemos sobre tu próxima ",
+              contactTitle2: "inversión",
+              contactDesc:
+                "Ya sea para invertir o realizar el sueño de la casa en la playa, estoy listo para atenderte con análisis criterioso, transparencia y dedicación en cada etapa.",
+              contactTimezone: "Atendiendo en Porto Belo, Itapema y región",
+              footerRights: "Todos los derechos reservados.",
+              footerDev: "Desarrollado por",
+            },
+          };
+
+          const t = computed(() => translations[lang.value] || translations.pt);
+
+          const navItems = computed(() => {
+            const labels = {
+              pt: [
+                "Sobre",
+                "Por que Investir",
+                "Como Funciona",
+                "Imóveis",
+                "Depoimentos",
+                "Dúvidas",
+                "Contato",
+              ],
+              en: [
+                "About",
+                "Why Invest",
+                "How it Works",
+                "Properties",
+                "Testimonials",
+                "FAQ",
+                "Contact",
+              ],
+              es: [
+                "Sobre mí",
+                "Por qué Invertir",
+                "Cómo Funciona",
+                "Inmuebles",
+                "Testimonios",
+                "Preguntas",
+                "Contacto",
+              ],
+            };
+            const hrefs = [
+              "#sobre",
+              "#porque",
+              "#servicos",
+              "#empreendimentos",
+              "#testemunhos",
+              "#duvidas",
+              "#contato",
+            ];
+            return (labels[lang.value] || labels.pt).map((label, i) => ({
+              label,
+              href: hrefs[i],
+            }));
+          });
+
+          const stats = computed(() => {
+            const data = {
+              pt: [
+                { value: "15+", label: "Anos de mercado imobiliário" },
+                { value: "100%", label: "Atendimento online" },
+                { value: "CRECI-SC", label: "23.809 credenciado" },
+              ],
+              en: [
+                { value: "15+", label: "Years in real estate" },
+                { value: "100%", label: "Online service" },
+                { value: "CRECI-SC", label: "23.809 certified" },
+              ],
+              es: [
+                { value: "15+", label: "Años en el mercado inmobiliario" },
+                { value: "100%", label: "Atención online" },
+                { value: "CRECI-SC", label: "23.809 acreditado" },
+              ],
+            };
+            return data[lang.value] || data.pt;
+          });
+
+          const reasons = computed(() => {
+            const icons = [
+              '<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>',
+              '<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>',
+              '<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>',
+            ];
+            const data = {
+              pt: [
+                {
+                  title: "Seu patrimônio cresce",
+                  desc: "Itapema e Porto Belo registram índices de valorização entre 15% e 20% ao ano, muito acima da média nacional. Seu patrimônio cresce mesmo enquanto você está longe.",
+                },
+                {
+                  title: "Crescimento e Valorização",
+                  desc: "O Litoral Norte de Santa Catarina é uma das regiões que mais crescem no Brasil. Porto Belo e Itapema atraem investimentos recordes em infraestrutura, turismo e novos empreendimentos, impulsionando a valorização dos imóveis ano após ano.",
+                },
+                {
+                  title: "Segurança Jurídica",
+                  desc: "Os empreendimentos selecionados passam por um crivo jurídico rigoroso, oferecendo segurança e solidez para a concretização do seu investimento.",
+                },
+              ],
+              en: [
+                {
+                  title: "Your wealth grows",
+                  desc: "Itapema and Porto Belo record appreciation rates between 15% and 20% per year, well above the national average. Your wealth grows even while you're away.",
+                },
+                {
+                  title: "Growth & Appreciation",
+                  desc: "The North Coast of Santa Catarina is one of the fastest-growing regions in Brazil. Porto Belo and Itapema attract record investments in infrastructure, tourism, and new developments, boosting property appreciation year after year.",
+                },
+                {
+                  title: "Legal Security",
+                  desc: "Selected developments go through rigorous legal screening, offering security and solidity for the realization of your investment.",
+                },
+              ],
+              es: [
+                {
+                  title: "Tu patrimonio crece",
+                  desc: "Itapema y Porto Belo registran índices de valorización entre 15% y 20% al año, muy por encima del promedio nacional. Tu patrimonio crece incluso mientras estás lejos.",
+                },
+                {
+                  title: "Crecimiento y Valorización",
+                  desc: "El Litoral Norte de Santa Catarina es una de las regiones de mayor crecimiento en Brasil. Porto Belo e Itapema atraen inversiones récord en infraestructura, turismo y nuevos emprendimientos, impulsando la valorización de los inmuebles año tras año.",
+                },
+                {
+                  title: "Seguridad Jurídica",
+                  desc: "Los emprendimientos seleccionados pasan por un riguroso filtro jurídico, ofreciendo seguridad y solidez para la concreción de tu inversión.",
+                },
+              ],
+            };
+            return (data[lang.value] || data.pt).map((item, i) => ({
+              ...item,
+              icon: icons[i],
+            }));
+          });
+
+          const steps = computed(() => {
+            const icons = [
+              '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>',
+              '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>',
+              '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>',
+              '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>',
+            ];
+            const data = {
+              pt: [
+                {
+                  title: "Conversa Inicial",
+                  desc: "Entendo seu perfil, objetivos e orçamento por videochamada. Sem compromisso, sem pressa.",
+                },
+                {
+                  title: "Seleção Personalizada",
+                  desc: "Escolho as melhores opções em Itapema e Porto Belo para o seu perfil. Vídeos, fotos e dados completos.",
+                },
+                {
+                  title: "Negociação e Documentação",
+                  desc: "Cuido de toda a negociação e documentação. Contratos digitais, assinatura eletrônica, tudo à distância.",
+                },
+                {
+                  title: "Acompanhamento Contínuo",
+                  desc: "Mesmo após a compra, sigo acompanhando seu investimento. Obra, entrega e gestão de locação.",
+                },
+              ],
+              en: [
+                {
+                  title: "Initial Conversation",
+                  desc: "I understand your profile, goals, and budget via video call. No commitment, no pressure.",
+                },
+                {
+                  title: "Personalized Selection",
+                  desc: "I choose the best options in Itapema and Porto Belo for your profile. Videos, photos, and complete data.",
+                },
+                {
+                  title: "Negotiation & Documentation",
+                  desc: "I handle all negotiation and documentation. Digital contracts, electronic signatures, everything remotely.",
+                },
+                {
+                  title: "Ongoing Support",
+                  desc: "Even after the purchase, I continue monitoring your investment. Construction, delivery, and rental management.",
+                },
+              ],
+              es: [
+                {
+                  title: "Conversación Inicial",
+                  desc: "Entiendo tu perfil, objetivos y presupuesto por videollamada. Sin compromiso, sin prisa.",
+                },
+                {
+                  title: "Selección Personalizada",
+                  desc: "Elijo las mejores opciones en Itapema y Porto Belo para tu perfil. Videos, fotos y datos completos.",
+                },
+                {
+                  title: "Negociación y Documentación",
+                  desc: "Me encargo de toda la negociación y documentación. Contratos digitales, firma electrónica, todo a distancia.",
+                },
+                {
+                  title: "Acompañamiento Continuo",
+                  desc: "Incluso después de la compra, sigo acompañando tu inversión. Obra, entrega y gestión de alquiler.",
+                },
+              ],
+            };
+            return (data[lang.value] || data.pt).map((item, i) => ({
+              ...item,
+              icon: icons[i],
+            }));
+          });
+
+          const albumDetails = computed(() => {
+            const data = {
+              pt: [
+                {
+                  title: "Balas Tower",
+                  location: "Porto Belo",
+                  price: "A consultar",
+                  tag: "Lançamento",
+                  desc: "Torre residencial com design contemporâneo e lazer completo em Porto Belo. Apartamentos com plantas inteligentes e acabamento premium.",
+                },
+                {
+                  title: "Balas Horizon",
+                  location: "Porto Belo",
+                  price: "A consultar",
+                  tag: "Lançamento",
+                  desc: "Empreendimento com vista panorâmica para o mar. Lazer completo com piscina, rooftop, coworking e muito mais em Porto Belo.",
+                },
+                {
+                  title: "Elevare",
+                  location: "Itapema",
+                  price: "A consultar",
+                  tag: "Destaque",
+                  desc: "Apartamentos sofisticados com design contemporâneo em Itapema. Academia, smart market, pizza wine bar, brinquedoteca e áreas de lazer completas.",
+                },
+                {
+                  title: "Porto Bello",
+                  location: "Porto Belo",
+                  price: "A consultar",
+                  tag: "Novo",
+                  desc: "O melhor de Porto Belo em um só lugar. Imóveis selecionados na região que mais valoriza no litoral catarinense.",
+                },
+                {
+                  title: "Itapema",
+                  location: "Itapema",
+                  price: "A consultar",
+                  tag: "Destaque",
+                  desc: "Imóveis exclusivos em Itapema, a praia mais badalada de Santa Catarina. Qualidade de vida e valorização garantida.",
+                },
+              ],
+              en: [
+                {
+                  title: "Balas Tower",
+                  location: "Porto Belo",
+                  price: "Contact us",
+                  tag: "New Launch",
+                  desc: "Residential tower with contemporary design and complete leisure facilities in Porto Belo. Apartments with intelligent floor plans and premium finishes.",
+                },
+                {
+                  title: "Balas Horizon",
+                  location: "Porto Belo",
+                  price: "Contact us",
+                  tag: "New Launch",
+                  desc: "Development with panoramic ocean views. Complete leisure with pool, rooftop, coworking, and much more in Porto Belo.",
+                },
+                {
+                  title: "Elevare",
+                  location: "Itapema",
+                  price: "Contact us",
+                  tag: "Featured",
+                  desc: "Sophisticated apartments with contemporary design in Itapema. Gym, smart market, pizza wine bar, kids playroom, and complete leisure areas.",
+                },
+                {
+                  title: "Porto Bello",
+                  location: "Porto Belo",
+                  price: "Contact us",
+                  tag: "New",
+                  desc: "The best of Porto Belo in one place. Selected properties in the fastest-appreciating region on the coast of Santa Catarina.",
+                },
+                {
+                  title: "Itapema",
+                  location: "Itapema",
+                  price: "Contact us",
+                  tag: "Featured",
+                  desc: "Exclusive properties in Itapema, the most sought-after beach in Santa Catarina. Quality of life and guaranteed appreciation.",
+                },
+              ],
+              es: [
+                {
+                  title: "Balas Tower",
+                  location: "Porto Belo",
+                  price: "Consultar",
+                  tag: "Lanzamiento",
+                  desc: "Torre residencial con diseño contemporáneo y ocio completo en Porto Belo. Apartamentos con plantas inteligentes y acabados premium.",
+                },
+                {
+                  title: "Balas Horizon",
+                  location: "Porto Belo",
+                  price: "Consultar",
+                  tag: "Lanzamiento",
+                  desc: "Emprendimiento con vista panorámica al mar. Ocio completo con piscina, rooftop, coworking y mucho más en Porto Belo.",
+                },
+                {
+                  title: "Elevare",
+                  location: "Itapema",
+                  price: "Consultar",
+                  tag: "Destacado",
+                  desc: "Apartamentos sofisticados con diseño contemporáneo en Itapema. Gimnasio, smart market, pizza wine bar, sala de juegos infantil y áreas de ocio completas.",
+                },
+                {
+                  title: "Porto Bello",
+                  location: "Porto Belo",
+                  price: "Consultar",
+                  tag: "Nuevo",
+                  desc: "Lo mejor de Porto Belo en un solo lugar. Inmuebles seleccionados en la región que más se valoriza en el litoral catarinense.",
+                },
+                {
+                  title: "Itapema",
+                  location: "Itapema",
+                  price: "Consultar",
+                  tag: "Destacado",
+                  desc: "Inmuebles exclusivos en Itapema, la playa más codiciada de Santa Catarina. Calidad de vida y valorización garantizada.",
+                },
+              ],
+            };
+            return data[lang.value] || data.pt;
+          });
+          const currentAlbum = computed(
+            () =>
+              albumDetails.value[activeAlbum.value] || albumDetails.value[0],
+          );
+
+          const testimonials = computed(() => {
+            const data = {
+              pt: [
+                {
+                  name: "James Thompson",
+                  initials: "JT",
+                  location: "Londres, Reino Unido",
+                  text: "Comprar um apartamento em Itapema morando em Londres parecia impossível. O Carlos cuidou de absolutamente tudo, documentação, negociação, vistoria. Recebi as chaves sem precisar ir ao Brasil. Profissional impecável.",
+                },
+                {
+                  name: "Liam O'Brien",
+                  initials: "LO",
+                  location: "Dublin, Irlanda",
+                  text: "O que me conquistou foi a transparência. O Carlos manda vídeo de tudo, explica cada detalhe e nunca me pressionou. Comprei meu segundo imóvel com ele e já estou de olho no terceiro.",
+                },
+                {
+                  name: "Sarah Mitchell",
+                  initials: "SM",
+                  location: "Toronto, Canadá",
+                  text: "Eu tinha muito medo de ser enganada comprando de longe. O Carlos foi super paciente, tirou todas as dúvidas e me mostrou que dava para investir com segurança. Hoje meu apartamento em Porto Belo já valorizou mais de 20%.",
+                },
+              ],
+              en: [
+                {
+                  name: "James Thompson",
+                  initials: "JT",
+                  location: "London, UK",
+                  text: "Buying an apartment in Itapema while living in London seemed impossible. Carlos took care of absolutely everything, documentation, negotiation, inspection. I got the keys without ever going to Brazil. Impeccable professional.",
+                },
+                {
+                  name: "Liam O'Brien",
+                  initials: "LO",
+                  location: "Dublin, Ireland",
+                  text: "What won me over was the transparency. Carlos sends videos of everything, explains every detail, and never pressured me. I bought my second property with him and I'm already eyeing a third.",
+                },
+                {
+                  name: "Sarah Mitchell",
+                  initials: "SM",
+                  location: "Toronto, Canada",
+                  text: "I was really afraid of being scammed buying from afar. Carlos was super patient, answered all my questions, and showed me it was possible to invest safely. Today my apartment in Porto Belo has appreciated over 20%.",
+                },
+              ],
+              es: [
+                {
+                  name: "James Thompson",
+                  initials: "JT",
+                  location: "Londres, Reino Unido",
+                  text: "Comprar un departamento en Itapema viviendo en Londres parecía imposible. Carlos se encargó de absolutamente todo, documentación, negociación, inspección. Recibí las llaves sin necesidad de ir a Brasil. Profesional impecable.",
+                },
+                {
+                  name: "Liam O'Brien",
+                  initials: "LO",
+                  location: "Dublín, Irlanda",
+                  text: "Lo que me conquistó fue la transparencia. Carlos envía video de todo, explica cada detalle y nunca me presionó. Compré mi segundo inmueble con él y ya estoy viendo el tercero.",
+                },
+                {
+                  name: "Sarah Mitchell",
+                  initials: "SM",
+                  location: "Toronto, Canadá",
+                  text: "Tenía mucho miedo de ser engañada comprando de lejos. Carlos fue super paciente, sacó todas las dudas y me mostró que era posible invertir con seguridad. Hoy mi departamento en Porto Belo ya se valorizó más de 20%.",
+                },
+              ],
+            };
+            return data[lang.value] || data.pt;
+          });
+
+          const faqs = computed(() => {
+            const data = {
+              pt: [
+                {
+                  q: "Consigo comprar um imóvel morando no exterior?",
+                  a: "Sim! Todo o processo pode ser feito remotamente, com documentos digitais e procuração quando necessário. Cuidamos de tudo para que você não precise se deslocar. E se preferir atendimento presencial, temos equipe em Itapema e Porto Belo.",
+                },
+                {
+                  q: "Parcelamento direto com a construtora",
+                  a: "O parcelamento direto com a construtora é mais flexível que o bancário. Normalmente a entrada é de 20% a 30%, parcelada durante a obra, e o saldo pode ser parcelado em até 120 meses. As parcelas são ajustadas pelo CUB/SC.",
+                },
+                {
+                  q: "Por que Itapema e Porto Belo são bons investimentos?",
+                  a: "Essas duas cidades estão entre as que mais valorizam no Brasil, com índices entre 15% e 20% ao ano. Porto Belo está recebendo grandes investimentos em infraestrutura (marina, shopping, orla) e o turismo já traz mais de 1 milhão de visitantes por temporada.",
+                },
+                {
+                  q: "É seguro comprar imóvel na planta?",
+                  a: "Sim! Verificamos a idoneidade da construtora, o registro do empreendimento e toda a documentação legal. Acompanhamos a obra pessoalmente e você recebe atualizações por vídeo e fotos regularmente.",
+                },
+                {
+                  q: "Consigo ter renda com aluguel de temporada?",
+                  a: "Com certeza. Muitos empreendimentos na região oferecem gestão de locação por temporada. A rentabilidade média fica entre 6% e 10% ao ano. Te ajudamos a escolher o imóvel com melhor potencial de renda.",
+                },
+                {
+                  q: "Como funciona o atendimento?",
+                  a: "Oferecemos atendimento 100% online para quem está no exterior, com videochamadas em qualquer fuso horário. Para quem está no Brasil, temos equipe presencial em Itapema e Porto Belo pronta para te atender pessoalmente.",
+                },
+              ],
+              en: [
+                {
+                  q: "Can I buy property while living abroad?",
+                  a: "Yes! The entire process can be done remotely, with digital documents and power of attorney when needed. We handle everything so you don't need to travel. And if you prefer in-person service, we have a team in Itapema and Porto Belo.",
+                },
+                {
+                  q: "Direct installment with the developer",
+                  a: "Direct installment with the developer is more flexible than bank financing. Typically the down payment is 20% to 30%, paid in installments during construction, and the balance can be paid in installments over up to 120 months. Installments are adjusted by CUB/SC.",
+                },
+                {
+                  q: "Why are Itapema and Porto Belo good investments?",
+                  a: "These two cities are among the fastest-appreciating in Brazil, with rates between 15% and 20% per year. Porto Belo is receiving major infrastructure investments (marina, shopping center, waterfront) and tourism already brings over 1 million visitors per season.",
+                },
+                {
+                  q: "Is it safe to buy pre-construction property?",
+                  a: "Yes! We verify the developer's reputation, the project registration, and all legal documentation. We personally monitor construction and you receive regular video and photo updates.",
+                },
+                {
+                  q: "Can I earn vacation rental income?",
+                  a: "Absolutely. Many developments in the region offer vacation rental management. Average profitability is between 6% and 10% per year. We help you choose the property with the best income potential.",
+                },
+                {
+                  q: "How does the service work?",
+                  a: "We offer 100% online service for those abroad, with video calls in any timezone. For those in Brazil, we have an in-person team in Itapema and Porto Belo ready to assist you personally.",
+                },
+              ],
+              es: [
+                {
+                  q: "¿Puedo comprar un inmueble viviendo en el exterior?",
+                  a: "¡Sí! Todo el proceso puede hacerse de forma remota, con documentos digitales y poder notarial cuando sea necesario. Nos encargamos de todo para que no necesites desplazarte. Y si prefieres atención presencial, tenemos equipo en Itapema y Porto Belo.",
+                },
+                {
+                  q: "Parcelación directo con la constructora",
+                  a: "El parcelamiento directo con la constructora es más flexible que el bancario. Normalmente la entrada es del 20% al 30%, parcelada durante la obra, y el saldo puede parcelarse en hasta 120 meses. Las cuotas se ajustan por el CUB/SC.",
+                },
+                {
+                  q: "¿Por qué Itapema y Porto Belo son buenas inversiones?",
+                  a: "Estas dos ciudades están entre las que más se valorizan en Brasil, con índices entre 15% y 20% al año. Porto Belo está recibiendo grandes inversiones en infraestructura (marina, shopping, costanera) y el turismo ya trae más de 1 millón de visitantes por temporada.",
+                },
+                {
+                  q: "¿Es seguro comprar inmueble en planos?",
+                  a: "¡Sí! Verificamos la idoneidad de la constructora, el registro del emprendimiento y toda la documentación legal. Acompañamos la obra personalmente y recibes actualizaciones por video y fotos regularmente.",
+                },
+                {
+                  q: "¿Puedo tener renta con alquiler de temporada?",
+                  a: "Sin duda. Muchos emprendimientos en la región ofrecen gestión de alquiler por temporada. La rentabilidad promedio está entre 6% y 10% al año. Te ayudamos a elegir el inmueble con mejor potencial de renta.",
+                },
+                {
+                  q: "¿Cómo funciona la atención?",
+                  a: "Ofrecemos atención 100% online para quienes están en el exterior, con videollamadas en cualquier zona horaria. Para quienes están en Brasil, tenemos equipo presencial en Itapema y Porto Belo listo para atenderte personalmente.",
+                },
+              ],
+            };
+            return data[lang.value] || data.pt;
+          });
+
+          const handleScroll = () => {
+            scrolled.value = window.scrollY > 50;
+          };
+
+          onMounted(() => {
+            window.addEventListener("scroll", handleScroll);
+            const checkMobile = () => {
+              isMobile.value = window.innerWidth < 640;
+            };
+            checkMobile();
+            window.addEventListener("resize", checkMobile);
+            AOS.init({
+              duration: 800,
+              easing: "ease-out-cubic",
+              once: true,
+              offset: 80,
+            });
+          });
+
+          onUnmounted(() => {
+            window.removeEventListener("scroll", handleScroll);
+            clearTimeout(carouselTimer);
+          });
+
+          return {
+            scrolled,
+            mobileMenu,
+            activeFaq,
+            langOpen,
+            lang,
+            langs,
+            langFlag,
+            langLabel,
+            toggleLang,
+            setLang,
+            t,
+            heroColumns,
+            navItems,
+            stats,
+            reasons,
+            steps,
+            albumDetails,
+            currentAlbum,
+            testimonials,
+            faqs,
+            albums,
+            activeAlbum,
+            albumImgIdx,
+            goToAlbum,
+            moveImg,
+            setImg,
+            cardStyle,
+            onTouchStart,
+            onTouchEnd,
+          };
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>
