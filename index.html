@@ -812,6 +812,7 @@
                   :src="album.images[albumImgIdx[album.id]]"
                   :alt="album.title"
                   class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500"
+                  :style="{ objectPosition: album.id === 'elevare' && albumImgIdx[album.id] <= 1 ? 'center bottom' : 'center' }"
                 />
                 <div
                   class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/40"
